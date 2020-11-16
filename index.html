@@ -148,7 +148,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://csr16.github.io/2020/11/15/%E4%BD%BF%E7%94%A8HMM+GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">
+    <link itemprop="mainEntityOfPage" href="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -162,7 +162,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/11/15/%E4%BD%BF%E7%94%A8HMM+GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" class="post-title-link" itemprop="url">使用HMM+GMM进行单个词的语音识别</a>
+            <a href="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" class="post-title-link" itemprop="url">使用HMM+GMM进行单个词的语音识别</a>
         </h2>
 
         <div class="post-meta">
@@ -171,16 +171,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-11-15 15:14:39" itemprop="dateCreated datePublished" datetime="2020-11-15T15:14:39+08:00">2020-11-15</time>
+              <time title="创建时间：2020-11-16 08:50:34 / 修改时间：09:03:28" itemprop="dateCreated datePublished" datetime="2020-11-16T08:50:34+08:00">2020-11-16</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-16 00:13:17" itemprop="dateModified" datetime="2020-11-16T00:13:17+08:00">2020-11-16</time>
-              </span>
 
           
 
@@ -193,7 +187,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="使用HMM-GMM进行单个词的语音识别"><a href="#使用HMM-GMM进行单个词的语音识别" class="headerlink" title="使用HMM+GMM进行单个词的语音识别"></a>使用HMM+GMM进行单个词的语音识别</h3><h4 id="sirui-chen"><a href="#sirui-chen" class="headerlink" title="sirui chen"></a>sirui chen</h4><ul>
+          <ul>
 <li><p>实验环境</p>
 <ul>
 <li><p>IDE: vscode</p>
@@ -201,125 +195,15 @@
 <li><p>环境依赖：Python 3.8.3 Matplotlib 3.2.2 librosa 0.8.0</p>
 <p>joblib 0.16.0 hmmlearn 0.2.4</p>
 </li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>项目结构</p>
-<ul>
-<li><p>hmmgmm.py: 自己实现的HMM+GMM</p>
-</li>
-<li><p>Main.py: 主程序</p>
-</li>
-<li><p>Images: 图片存放目录</p>
-</li>
-<li><p>data_en_train:数据存放目录</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>算法逻辑</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GMHMM</span>:</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    A GMM-HMM - This is a class implementation for HMMs with Gaussian</span></span><br><span class="line"><span class="string">    mixtures. </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Model attributes:</span></span><br><span class="line"><span class="string">    - n            number of hidden states</span></span><br><span class="line"><span class="string">    - m            number of mixtures in each state (each &#x27;symbol&#x27; like in the discrete case points to a mixture)</span></span><br><span class="line"><span class="string">    - d            number of features (an observation can contain multiple features)</span></span><br><span class="line"><span class="string">    - A            hidden states transition probability matrix ([NxN] numpy array)</span></span><br><span class="line"><span class="string">    - means        means of the different mixtures ([NxMxD] numpy array)</span></span><br><span class="line"><span class="string">    - covars       covars of the different mixtures ([NxM] array of [DxD] covar matrices)</span></span><br><span class="line"><span class="string">    - w            weighing of each state&#x27;s mixture components ([NxM] numpy array)</span></span><br><span class="line"><span class="string">    - pi           initial state&#x27;s PMF ([N] numpy array).</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Additional attributes:</span></span><br><span class="line"><span class="string">    - min_std      used to create a covariance prior to prevent the covariances matrices from underflowing</span></span><br><span class="line"><span class="string">    - verbose      a flag for printing progress information, mainly when learning</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>GMM+HMM模型，主要参数如上所示：</p>
-<ul>
-<li>n：状态个数</li>
-<li>m：每个状态的gaussian个数</li>
-<li>d：特征向量纬度</li>
-<li>A：状态转移矩阵</li>
-<li>means：GMM均值矩阵</li>
-<li>covars：GMM方差矩阵</li>
-<li>w：GMM权重矩阵</li>
-<li>pi：HMM每个状态作为初始状态的概率矩阵</li>
-<li>min_std：最低协方差，以防数据下溢</li>
-<li>verbose：中间过程打印</li>
-</ul>
-</li>
-</ul>
-<p>  算法的具体逻辑如下</p>
-<ol>
-<li><p>初始化</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_par_init</span>(<span class="params">self, observations</span>):</span></span><br><span class="line">        <span class="keyword">if</span> self.A == <span class="literal">None</span>:</span><br><span class="line">            self.A = self._stochasticize(self.random_state.rand(self.n, self.n))</span><br><span class="line">        <span class="keyword">if</span> self.pi == <span class="literal">None</span>:</span><br><span class="line">            self.pi = self._normalize(self.random_state.rand(self.n, <span class="number">1</span>))</span><br><span class="line">        <span class="keyword">if</span> self.means == <span class="literal">None</span>:</span><br><span class="line">            kmean = KMeans(n_clusters=self.n*self.m).fit(observations)</span><br><span class="line">            means = kmean.cluster_centers_.reshape((self.n, self.m, self.d))</span><br><span class="line">            self.means = means</span><br><span class="line">        <span class="keyword">if</span> self.covars == <span class="literal">None</span>:</span><br><span class="line">            self.covars = [[np.mat(np.eye(self.d,self.d)) <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(self.m)] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(self.n)]</span><br><span class="line">        <span class="keyword">if</span> self.w == <span class="literal">None</span>:</span><br><span class="line">            self.w = np.ones((self.n, self.m))</span><br></pre></td></tr></table></figure>
-
-<p>主要参数需要在EM之前就需要进行初始化，本模型除了means使用了kmeans进行聚类初始化以外，A与pi矩阵采用了随机和标准化的方法，covars和w矩阵使用的是定值初始化。由于EM算法容易陷入局部最优的特性，初始化的过程很大程度上决定了最终的模型表现。上述初始化方法可能不是最优的，但是在没有更多先验知识的情况下暂且采取这种办法进行参数初始化</p>
-</li>
-</ol>
-<ol start="2">
-<li><p>GMMHMM的EM过程</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_baumwelch</span>(<span class="params">self,observations</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        An EM(expectation-modification) algorithm devised by Baum-Welch. Finds a local maximum</span></span><br><span class="line"><span class="string">        that outputs the model that produces the highest probability, given a set of observations.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns the new maximized model parameters</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="comment"># E step - calculate statistics</span></span><br><span class="line">        stats = &#123;&#125;</span><br><span class="line">        </span><br><span class="line">        stats[<span class="string">&#x27;alpha&#x27;</span>] = self._calalpha(observations)</span><br><span class="line">        stats[<span class="string">&#x27;beta&#x27;</span>] = self._calbeta(observations)</span><br><span class="line">        stats[<span class="string">&#x27;xi&#x27;</span>] = self._calxi(observations,stats[<span class="string">&#x27;alpha&#x27;</span>],stats[<span class="string">&#x27;beta&#x27;</span>])</span><br><span class="line">        stats[<span class="string">&#x27;gamma&#x27;</span>] = self._calgamma(stats[<span class="string">&#x27;alpha&#x27;</span>], stats[<span class="string">&#x27;beta&#x27;</span>], observations)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># M step</span></span><br><span class="line">        new_model = &#123;&#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># new init vector is set to the frequency of being in each step at t=0 </span></span><br><span class="line">        new_model[<span class="string">&#x27;pi&#x27;</span>] = stats[<span class="string">&#x27;gamma&#x27;</span>][<span class="number">0</span>]</span><br><span class="line">        A_new, w_new, means_new, covars_new = self._reestimate(observations, stats[<span class="string">&#x27;gamma&#x27;</span>], stats[<span class="string">&#x27;xi&#x27;</span>])</span><br><span class="line">        new_model[<span class="string">&#x27;A&#x27;</span>] = A_new</span><br><span class="line">        new_model[<span class="string">&#x27;w&#x27;</span>] = w_new</span><br><span class="line">        new_model[<span class="string">&#x27;means&#x27;</span>] = means_new</span><br><span class="line">        new_model[<span class="string">&#x27;covars&#x27;</span>] = covars_new</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> new_model</span><br></pre></td></tr></table></figure>
-
-<p>E步：利用现有的参数（mean、covar、A）计算alpha、beta、xi、gamma四个模型参数，将样本分布到目前的参数模型中</p>
-<p>M步：样本分布计算好后，重新估计分布参数A、w、mean、covar</p>
-<p>其中，上述参数更新满足下面的公式</p>
-<blockquote>
-<p>E步：</p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/alpha.png" alt="alpha"></p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/beta.png" alt="beta"></p>
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/xi.png" alt="xi" style="zoom:67%;" />
-
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/gamma.png" alt="gamma" style="zoom:50%;" />
-
-
-
-<p>M步：</p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/a.png" alt="a"></p>
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/w.png" alt="w" style="zoom:50%;" />
-
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/mu sigma.png" alt="mu sigma" style="zoom:50%;" />
-</blockquote>
-</li>
-</ol>
-<ol start="3">
-<li><p>训练过程</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span>(<span class="params">self, observations, iterations=<span class="number">1</span>, epsilon=<span class="number">0.0001</span>, thres=<span class="number">-0.001</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Updates the HMMs parameters given a new set of observed sequences.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Training is repeated &#x27;iterations&#x27; times, or until log likelihood of the model</span></span><br><span class="line"><span class="string">        increases by less than &#x27;epsilon&#x27;.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        &#x27;thres&#x27; denotes the algorithms sensitivity to the log likelihood decreasing</span></span><br><span class="line"><span class="string">        from one iteration to the other.</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span>        </span><br><span class="line">        self._calBmap(observations)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(iterations):</span><br><span class="line">            prob_old, prob_new = self.trainiter(observations)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (self.verbose):      </span><br><span class="line">                print(<span class="string">&quot;iter: &quot;</span>, i, <span class="string">&quot;, L(model|O) =&quot;</span>, prob_old, <span class="string">&quot;, L(model_new|O) =&quot;</span>, prob_new, <span class="string">&quot;, converging =&quot;</span>, ( prob_new-prob_old &gt; thres ))</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(prob_new-prob_old) &lt; epsilon):</span><br><span class="line">                <span class="comment"># converged</span></span><br><span class="line">                <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-
-<p>给定训练轮数，每轮会进行一次EM迭代<code>trainiter</code>，并且返回新模型和旧模型的最大似然概率估计。当估计值改变小于epsilon时，认为模型已经收敛，跳出训练。</p>
-<p>每轮训练时还会打印训练结果</p>
-</li>
-</ol>
-<ol start="4">
-<li><p>模型预测</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict</span>(<span class="params">self, observations</span>):</span></span><br><span class="line">    <span class="keyword">return</span> self._forwardbackward(observations, cache = <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_forwardbackward</span>(<span class="params">self,observations, cache=<span class="literal">False</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Forward-Backward procedure is used to efficiently calculate the probability of the observation, given the model - P(O|model)</span></span><br><span class="line"><span class="string">    alpha_t(x) = P(O1...Ot,qt=Sx|model) - The probability of state x and the observation up to time t, given the model.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    The returned value is the log of the probability, i.e: the log likehood model, give the observation - logL(model|O).</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    In the discrete case, the value returned should be negative, since we are taking the log of actual (discrete)</span></span><br><span class="line"><span class="string">    probabilities. In the continuous case, we are using PDFs which aren&#x27;t normalized into actual probabilities,</span></span><br><span class="line"><span class="string">    so the value could be positive.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> (cache==<span class="literal">False</span>):</span><br><span class="line">        self._calBmap(observations)</span><br><span class="line">    </span><br><span class="line">    alpha = self._calalpha(observations)</span><br><span class="line">    <span class="keyword">return</span> np.log(<span class="built_in">sum</span>(alpha[<span class="number">-1</span>]))</span><br></pre></td></tr></table></figure>
-
-<p>直接调用fowardbackward算法得到最终的最大似然概率</p>
-</li>
-</ol>
-<ul>
-<li><p>实验过程</p>
-<p>由于实验数据太大，模型产生了数据下溢现象，所以最终还是采用的还是hmmlearn的包进行实验</p>
-<p>实验过程如下：</p>
-<ul>
-<li><p>对0-9每条语音建立一个HMMGMM模型，并将数据集划分为十条训练集和十条测试集</p>
-</li>
-<li><p>将训练集数据输入模型进行训练，并保存模型参数</p>
-</li>
-<li><p>测试时将每条语音与十个模型匹配，得分最高的模型作为识别结果</p>
-</li>
-<li><p>由于对于每个数字语音模型的建模，n与m都应有所不同，所以采取grid search的方法在小范围内搜索一遍参数，并在最终对每个数字建模时采用得分最高的n与m作为参数</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>实验结果及分析</p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/result.png" alt="result"></p>
-<p>模型的预期最好准确率：0.45</p>
-<p>模型的实际最好准确率：0.33</p>
-<p>之前也提到，EM算法的最终表现很依赖于初始化结果，所以在不同的随机初始化种子下测试调参了很多轮，但结果依旧不是很好。除了上述原因外，最大似然估计也十分依据样本数量，在样本数量不足的情况下，模型表现必然会有所波动，方差非常大，这也是在所难免的。</p>
-<p>此外，训练数据中每条语音长短不一，hmmgmm在训练时可能以最短的语音长度作为标准进行了截断处理，这也削弱了模型的表现</p>
-</li>
-</ul>
-<ul>
-<li><p>参考资料</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.inf.ed.ac.uk/teaching/courses/asr/2012-13/asr03-hmmgmm-4up.pdf">http://www.inf.ed.ac.uk/teaching/courses/asr/2012-13/asr03-hmmgmm-4up.pdf</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/guyz/HMM">https://github.com/guyz/HMM</a></p>
-<p><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=18626">https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=18626</a></p>
-</blockquote>
-</li>
-</ul>
-
+</ul></li></ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

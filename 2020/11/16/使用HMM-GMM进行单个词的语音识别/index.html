@@ -20,28 +20,28 @@
     var CONFIG = {"hostname":"csr16.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="使用HMM+GMM进行单个词的语音识别sirui chen 实验环境  IDE: vscode  环境依赖：Python 3.8.3 Matplotlib 3.2.2 librosa 0.8.0 joblib 0.16.0 hmmlearn 0.2.4      项目结构  hmmgmm.py: 自己实现的HMM+GMM  Main.py: 主程序  Images: 图片存放目录  data_en">
+  <meta name="description" content="实验环境  IDE: vscode  环境依赖：Python 3.8.3 Matplotlib 3.2.2 librosa 0.8.0 joblib 0.16.0 hmmlearn 0.2.4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用HMM+GMM进行单个词的语音识别">
-<meta property="og:url" content="http://csr16.github.io/2020/11/15/%E4%BD%BF%E7%94%A8HMM+GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/index.html">
+<meta property="og:url" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/index.html">
 <meta property="og:site_name" content="Great Expectation">
-<meta property="og:description" content="使用HMM+GMM进行单个词的语音识别sirui chen 实验环境  IDE: vscode  环境依赖：Python 3.8.3 Matplotlib 3.2.2 librosa 0.8.0 joblib 0.16.0 hmmlearn 0.2.4      项目结构  hmmgmm.py: 自己实现的HMM+GMM  Main.py: 主程序  Images: 图片存放目录  data_en">
+<meta property="og:description" content="实验环境  IDE: vscode  环境依赖：Python 3.8.3 Matplotlib 3.2.2 librosa 0.8.0 joblib 0.16.0 hmmlearn 0.2.4">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/alpha.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/beta.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/xi.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/gamma.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/a.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/w.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/mu%20sigma.png">
-<meta property="og:image" content="http://csr16.github.io/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/result.png">
-<meta property="article:published_time" content="2020-11-15T07:14:39.989Z">
-<meta property="article:modified_time" content="2020-11-15T16:13:17.903Z">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/alpha.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/beta.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/gamma.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/xi.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/a.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/w.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/mu%20sigma.png">
+<meta property="og:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/result.png">
+<meta property="article:published_time" content="2020-11-16T00:50:34.000Z">
+<meta property="article:modified_time" content="2020-11-16T01:03:28.201Z">
 <meta property="article:author" content="Sirui Chen">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://csr16.github.io/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/alpha.png">
+<meta name="twitter:image" content="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/alpha.png">
 
-<link rel="canonical" href="http://csr16.github.io/2020/11/15/%E4%BD%BF%E7%94%A8HMM+GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">
+<link rel="canonical" href="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">
 
 
 <script id="page-configurations">
@@ -160,7 +160,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://csr16.github.io/2020/11/15/%E4%BD%BF%E7%94%A8HMM+GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">
+    <link itemprop="mainEntityOfPage" href="http://csr16.github.io/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,16 +182,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-11-15 15:14:39" itemprop="dateCreated datePublished" datetime="2020-11-15T15:14:39+08:00">2020-11-15</time>
+              <time title="创建时间：2020-11-16 08:50:34 / 修改时间：09:03:28" itemprop="dateCreated datePublished" datetime="2020-11-16T08:50:34+08:00">2020-11-16</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-16 00:13:17" itemprop="dateModified" datetime="2020-11-16T00:13:17+08:00">2020-11-16</time>
-              </span>
 
           
 
@@ -204,7 +198,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="使用HMM-GMM进行单个词的语音识别"><a href="#使用HMM-GMM进行单个词的语音识别" class="headerlink" title="使用HMM+GMM进行单个词的语音识别"></a>使用HMM+GMM进行单个词的语音识别</h3><h4 id="sirui-chen"><a href="#sirui-chen" class="headerlink" title="sirui chen"></a>sirui chen</h4><ul>
+        <ul>
 <li><p>实验环境</p>
 <ul>
 <li><p>IDE: vscode</p>
@@ -213,9 +207,8 @@
 <p>joblib 0.16.0 hmmlearn 0.2.4</p>
 </li>
 </ul>
+<a id="more"></a>
 </li>
-</ul>
-<ul>
 <li><p>项目结构</p>
 <ul>
 <li><p>hmmgmm.py: 自己实现的HMM+GMM</p>
@@ -265,25 +258,26 @@
 <p>其中，上述参数更新满足下面的公式</p>
 <blockquote>
 <p>E步：</p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/alpha.png" alt="alpha"></p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/beta.png" alt="beta"></p>
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/xi.png" alt="xi" style="zoom:67%;" />
+<p><img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/alpha.png" alt="alpha"></p>
+<img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/beta.png" alt="beta" style="zoom:80%;">
 
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/gamma.png" alt="gamma" style="zoom:50%;" />
+<img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/gamma.png" alt="gamma" style="zoom:50%;">
+
+<img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/xi.png" alt="xi" style="zoom:80%;">
 
 
 
 <p>M步：</p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/a.png" alt="a"></p>
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/w.png" alt="w" style="zoom:50%;" />
+<p><img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/a.png" alt="a"></p>
+<img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/w.png" alt="w" style="zoom:80%;">
 
-<img src="/Users/siruichen/Documents/课件/研究生/言语信息处理/第二次小作业/images/mu sigma.png" alt="mu sigma" style="zoom:50%;" />
+<img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/mu sigma.png" alt="mu sigma" style="zoom:50%;">
 </blockquote>
 </li>
 </ol>
 <ol start="3">
 <li><p>训练过程</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span>(<span class="params">self, observations, iterations=<span class="number">1</span>, epsilon=<span class="number">0.0001</span>, thres=<span class="number">-0.001</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Updates the HMMs parameters given a new set of observed sequences.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Training is repeated &#x27;iterations&#x27; times, or until log likelihood of the model</span></span><br><span class="line"><span class="string">        increases by less than &#x27;epsilon&#x27;.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        &#x27;thres&#x27; denotes the algorithms sensitivity to the log likelihood decreasing</span></span><br><span class="line"><span class="string">        from one iteration to the other.</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span>        </span><br><span class="line">        self._calBmap(observations)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(iterations):</span><br><span class="line">            prob_old, prob_new = self.trainiter(observations)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (self.verbose):      </span><br><span class="line">                print(<span class="string">&quot;iter: &quot;</span>, i, <span class="string">&quot;, L(model|O) =&quot;</span>, prob_old, <span class="string">&quot;, L(model_new|O) =&quot;</span>, prob_new, <span class="string">&quot;, converging =&quot;</span>, ( prob_new-prob_old &gt; thres ))</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(prob_new-prob_old) &lt; epsilon):</span><br><span class="line">                <span class="comment"># converged</span></span><br><span class="line">                <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span>(<span class="params">self, observations, iterations=<span class="number">1</span>, epsilon=<span class="number">0.0001</span>, thres=<span class="number">-0.001</span></span>):</span></span><br><span class="line">          <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">          Updates the HMMs parameters given a new set of observed sequences.</span></span><br><span class="line"><span class="string">          </span></span><br><span class="line"><span class="string">          Training is repeated &#x27;iterations&#x27; times, or until log likelihood of the model</span></span><br><span class="line"><span class="string">          increases by less than &#x27;epsilon&#x27;.</span></span><br><span class="line"><span class="string">          </span></span><br><span class="line"><span class="string">          &#x27;thres&#x27; denotes the algorithms sensitivity to the log likelihood decreasing</span></span><br><span class="line"><span class="string">          from one iteration to the other.</span></span><br><span class="line"><span class="string">          &#x27;&#x27;&#x27;</span>        </span><br><span class="line">          self._calBmap(observations)</span><br><span class="line">          </span><br><span class="line">          <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(iterations):</span><br><span class="line">              prob_old, prob_new = self.trainiter(observations)</span><br><span class="line">  </span><br><span class="line">              <span class="keyword">if</span> (self.verbose):      </span><br><span class="line">                  print(<span class="string">&quot;iter: &quot;</span>, i, <span class="string">&quot;, L(model|O) =&quot;</span>, prob_old, <span class="string">&quot;, L(model_new|O) =&quot;</span>, prob_new, <span class="string">&quot;, converging =&quot;</span>, ( prob_new-prob_old &gt; thres ))</span><br><span class="line">                  </span><br><span class="line">              <span class="keyword">if</span> (<span class="built_in">abs</span>(prob_new-prob_old) &lt; epsilon):</span><br><span class="line">                  <span class="comment"># converged</span></span><br><span class="line">                  <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
 
 <p>给定训练轮数，每轮会进行一次EM迭代<code>trainiter</code>，并且返回新模型和旧模型的最大似然概率估计。当估计值改变小于epsilon时，认为模型已经收敛，跳出训练。</p>
 <p>每轮训练时还会打印训练结果</p>
@@ -291,7 +285,7 @@
 </ol>
 <ol start="4">
 <li><p>模型预测</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict</span>(<span class="params">self, observations</span>):</span></span><br><span class="line">    <span class="keyword">return</span> self._forwardbackward(observations, cache = <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_forwardbackward</span>(<span class="params">self,observations, cache=<span class="literal">False</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Forward-Backward procedure is used to efficiently calculate the probability of the observation, given the model - P(O|model)</span></span><br><span class="line"><span class="string">    alpha_t(x) = P(O1...Ot,qt=Sx|model) - The probability of state x and the observation up to time t, given the model.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    The returned value is the log of the probability, i.e: the log likehood model, give the observation - logL(model|O).</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    In the discrete case, the value returned should be negative, since we are taking the log of actual (discrete)</span></span><br><span class="line"><span class="string">    probabilities. In the continuous case, we are using PDFs which aren&#x27;t normalized into actual probabilities,</span></span><br><span class="line"><span class="string">    so the value could be positive.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> (cache==<span class="literal">False</span>):</span><br><span class="line">        self._calBmap(observations)</span><br><span class="line">    </span><br><span class="line">    alpha = self._calalpha(observations)</span><br><span class="line">    <span class="keyword">return</span> np.log(<span class="built_in">sum</span>(alpha[<span class="number">-1</span>]))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">predict</span>(<span class="params">self, observations</span>):</span></span><br><span class="line">      <span class="keyword">return</span> self._forwardbackward(observations, cache = <span class="literal">True</span>)</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_forwardbackward</span>(<span class="params">self,observations, cache=<span class="literal">False</span></span>):</span></span><br><span class="line">      <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">      Forward-Backward procedure is used to efficiently calculate the probability of the observation, given the model - P(O|model)</span></span><br><span class="line"><span class="string">      alpha_t(x) = P(O1...Ot,qt=Sx|model) - The probability of state x and the observation up to time t, given the model.</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">      The returned value is the log of the probability, i.e: the log likehood model, give the observation - logL(model|O).</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">      In the discrete case, the value returned should be negative, since we are taking the log of actual (discrete)</span></span><br><span class="line"><span class="string">      probabilities. In the continuous case, we are using PDFs which aren&#x27;t normalized into actual probabilities,</span></span><br><span class="line"><span class="string">      so the value could be positive.</span></span><br><span class="line"><span class="string">      &#x27;&#x27;&#x27;</span></span><br><span class="line">      <span class="keyword">if</span> (cache==<span class="literal">False</span>):</span><br><span class="line">          self._calBmap(observations)</span><br><span class="line">      </span><br><span class="line">      alpha = self._calalpha(observations)</span><br><span class="line">      <span class="keyword">return</span> np.log(<span class="built_in">sum</span>(alpha[<span class="number">-1</span>]))</span><br></pre></td></tr></table></figure>
 
 <p>直接调用fowardbackward算法得到最终的最大似然概率</p>
 </li>
@@ -314,7 +308,7 @@
 </ul>
 <ul>
 <li><p>实验结果及分析</p>
-<p><img src="/Users/siruichen/Documents/%E8%AF%BE%E4%BB%B6/%E7%A0%94%E7%A9%B6%E7%94%9F/%E8%A8%80%E8%AF%AD%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%B0%8F%E4%BD%9C%E4%B8%9A/images/result.png" alt="result"></p>
+<p><img src="/2020/11/16/%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/result.png" alt="result"></p>
 <p>模型的预期最好准确率：0.45</p>
 <p>模型的实际最好准确率：0.33</p>
 <p>之前也提到，EM算法的最终表现很依赖于初始化结果，所以在不同的随机初始化种子下测试调参了很多轮，但结果依旧不是很好。除了上述原因外，最大似然估计也十分依据样本数量，在样本数量不足的情况下，模型表现必然会有所波动，方差非常大，这也是在所难免的。</p>
@@ -407,7 +401,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8HMM-GMM%E8%BF%9B%E8%A1%8C%E5%8D%95%E4%B8%AA%E8%AF%8D%E7%9A%84%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">使用HMM+GMM进行单个词的语音识别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sirui-chen"><span class="nav-number">1.1.</span> <span class="nav-text">sirui chen</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
