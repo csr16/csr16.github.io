@@ -7,24 +7,22 @@ redirect_from:
   - /about.html
 ---
 
-I am an incoming PhD student at the [University of Illinois at Urbana-Champaign](https://illinois.edu/). I completed my M.E. from Renmin University of China, advised by [Prof. Jun Xu](https://gsai.ruc.edu.cn/english/~junxu). Prior to that, I obtained my B.E. from the Department of Foreign Languages and Literatures at Tsinghua University. The long-term goal of my research is to develop a reliable and controllable AI system that is fully aligned with human intentions. Specifically, my current research focuses on modeling interactivity and enhancing controllability within complex scenarios, such as recommender systems and multi-agent systems.
+I am an incoming PhD student at the [University of Illinois at Urbana-Champaign](https://illinois.edu/). I completed my M.E. from Renmin University of China, advised by [Prof. Jun Xu](https://gsai.ruc.edu.cn/english/~junxu). Prior to that, I obtained my B.E. from the Department of Foreign Languages and Literatures at Tsinghua University. 
+The long-term goal of my research is to develop a reliable and controllable AI system that is fully aligned with human intentions. Specifically, my current research focuses on modeling interactivity and enhancing controllability within complex scenarios, such as recommender systems and multi-agent systems.
 
 
 Publications
 ======
 **2024**
+
 - Incorporating Judgment Prediction into Legal Case Retrieval via Law-aware Generative Retrieval
-
-Weicong Qin, Zelin Cao, Weijie Yu, Zihua Si, __Sirui Chen__, Jun Xu
-
-Preprint
-
-[[Paper]](https://arxiv.org/abs/2312.09591)
+Weicong Qin, Zelin Cao, Weijie Yu, Zihua Si, __Sirui Chen__, Jun Xu<br>
+Preprint<br>
+[[Paper]](https://arxiv.org/abs/2312.09591)<br>
 
 - UOEP: User-Oriented Exploration Policy for Enhancing Long-Term User Experiences in Recommender Systems
 
 Changshuo Zhang *, __Sirui Chen *__, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu
-
 Preprint
 
 [[Paper]](https://arxiv.org/abs/2401.09034)
