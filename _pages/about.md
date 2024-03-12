@@ -14,49 +14,29 @@ The long-term goal of my research is to develop a reliable and controllable AI s
 Publications
 ======
 **2024**
-
 - Incorporating Judgment Prediction into Legal Case Retrieval via Law-aware Generative Retrieval
 Weicong Qin, Zelin Cao, Weijie Yu, Zihua Si, __Sirui Chen__, Jun Xu<br>
 Preprint<br>
 [[Paper]](https://arxiv.org/abs/2312.09591)<br>
-
 - UOEP: User-Oriented Exploration Policy for Enhancing Long-Term User Experiences in Recommender Systems
-
-Changshuo Zhang *, __Sirui Chen *__, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu
-Preprint
-
-[[Paper]](https://arxiv.org/abs/2401.09034)
-
+Changshuo Zhang *, __Sirui Chen *__, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu<br>
+Preprint<br>
+[[Paper]](https://arxiv.org/abs/2401.09034)<br>
 - Stas: Spatial-temporal return decomposition for multi-agent reinforcement learning
-
-__Sirui Chen *__, Zhaowei Zhang *, Yali Du, Yaodong Yang
-
-AAAI 2024
-
-[[Paper]](https://arxiv.org/abs/2304.07520) [[Code]](https://github.com/zowiezhang/STAS)
+__Sirui Chen *__, Zhaowei Zhang *, Yali Du, Yaodong Yang<br>
+AAAI 2024<br>
+[[Paper]](https://arxiv.org/abs/2304.07520) [[Code]](https://github.com/zowiezhang/STAS)<br>
 
 **2023**
-
 - Controllable Multi-Objective Re-ranking with Policy Hypernetworks
-
-__Sirui Chen *__, Yuan Wang *, Zijing Wen, Zhiyu Li, Changshuo Zhang, Xiao Zhang, Quan Lin, Cheng Zhu, Jun Xu
-
-KDD 2023
-
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/3580305.3599796?casa_token=0LtqSmC5JUQAAAAA:WMiWAkudR7D3HnJI83S5Hfmr9AM31TjIgnW4uf47pBJRlcx-UyQ0yf4bBD8IY5UcQ9akj1yfULHa) [[Code]](https://github.com/lyingCS/Controllable-Multi-Objective-Reranking)
-
+__Sirui Chen *__, Yuan Wang *, Zijing Wen, Zhiyu Li, Changshuo Zhang, Xiao Zhang, Quan Lin, Cheng Zhu, Jun Xu<br>
+KDD 2023<br>
+[[Paper]](https://dl.acm.org/doi/abs/10.1145/3580305.3599796?casa_token=0LtqSmC5JUQAAAAA:WMiWAkudR7D3HnJI83S5Hfmr9AM31TjIgnW4uf47pBJRlcx-UyQ0yf4bBD8IY5UcQ9akj1yfULHa) [[Code]](https://github.com/lyingCS/Controllable-Multi-Objective-Reranking)<br>
 - Reinforcement Re-ranking with 2D Grid-based Recommendation Panels
-
-__Sirui Chen__, Xiao Zhang, Xu Chen, Zhiyu Li, Yuan Wang, Quan Lin, Jun Xu
-
-SIGIR-AP 2023
-
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/3624918.3625311?casa_token=FTOMSZ8OASAAAAAA:MRqqcE__k0emy7Z7WlsQy0XxENCYDn-AfVQwEaLwiMw1Gs50lGT2ScV308yiqX4htUyceVaCbVV9)
-
+__Sirui Chen__, Xiao Zhang, Xu Chen, Zhiyu Li, Yuan Wang, Quan Lin, Jun Xu<br>
+SIGIR-AP 2023<br>
+[[Paper]](https://dl.acm.org/doi/abs/10.1145/3624918.3625311?casa_token=FTOMSZ8OASAAAAAA:MRqqcE__k0emy7Z7WlsQy0XxENCYDn-AfVQwEaLwiMw1Gs50lGT2ScV308yiqX4htUyceVaCbVV9)<br>
 - P-MMF: Provider Max-min Fairness Re-ranking in Recommender System
-
-Chen Xu, __Sirui Chen__, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong
-
-WWW 2023
-
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/3543507.3583296?casa_token=F51acjY5vuMAAAAA:zaoH21lA2vAK6kj0CShFe5XJI8AwaK6NhXj0qS4HND0XtSqsN-TCeZpwUcBsiBv7rK1NxxPBy5Ij) [[Code]](https://github.com/XuChen0427/P-MMF)
+Chen Xu, __Sirui Chen__, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong<br>
+WWW 2023<br>
+[[Paper]](https://dl.acm.org/doi/abs/10.1145/3543507.3583296?casa_token=F51acjY5vuMAAAAA:zaoH21lA2vAK6kj0CShFe5XJI8AwaK6NhXj0qS4HND0XtSqsN-TCeZpwUcBsiBv7rK1NxxPBy5Ij) [[Code]](https://github.com/XuChen0427/P-MMF)<br>
