@@ -14,18 +14,21 @@ The long-term goal of my research is to develop a reliable and controllable AI s
 Publications
 ======
 **2024**
+- ReCODE: Modeling Repeat Consumption with Neural ODE<br>
+Sunhao Dai, Changle Qu, Sirui Chen, Xiao Zhang and Jun Xu<br>
+SIGIR 2024 (Short)<br>
 - Incorporating Judgment Prediction into Legal Case Retrieval via Law-aware Generative Retrieval<br>
 Weicong Qin, Zelin Cao, Weijie Yu, Zihua Si, __Sirui Chen__, Jun Xu<br>
-Preprint<br>
+SIGIR 2024<br>
 [[Paper]](https://arxiv.org/abs/2312.09591)<br>
-- UOEP: User-Oriented Exploration Policy for Enhancing Long-Term User Experiences in Recommender Systems<br>
+- Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy<br>
 Changshuo Zhang *, __Sirui Chen *__, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu<br>
-Preprint<br>
-[[Paper]](https://arxiv.org/abs/2401.09034)<br>
+SIGIR 2024<br>
+[[Paper]](https://arxiv.org/abs/2401.09034) [[Code]](https://github.com/zowiezhang/STAS)<br>
 - Stas: Spatial-temporal return decomposition for multi-agent reinforcement learning<br>
 __Sirui Chen *__, Zhaowei Zhang *, Yali Du, Yaodong Yang<br>
 AAAI 2024<br>
-[[Paper]](https://arxiv.org/abs/2304.07520) [[Code]](https://github.com/zowiezhang/STAS)<br>
+[[Paper]](https://arxiv.org/abs/2304.07520) [[Code]](https://github.com/lyingCS/UOEP)<br>
 
 **2023**
 - Controllable Multi-Objective Re-ranking with Policy Hypernetworks<br>
@@ -38,5 +41,5 @@ SIGIR-AP 2023<br>
 [[Paper]](https://dl.acm.org/doi/abs/10.1145/3624918.3625311?casa_token=FTOMSZ8OASAAAAAA:MRqqcE__k0emy7Z7WlsQy0XxENCYDn-AfVQwEaLwiMw1Gs50lGT2ScV308yiqX4htUyceVaCbVV9)<br>
 - P-MMF: Provider Max-min Fairness Re-ranking in Recommender System<br>
 Chen Xu, __Sirui Chen__, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong<br>
-WWW 2023<br>
+WWW 2023 __Spotlight-Best Paper Award Nominations(16/365)__<br>
 [[Paper]](https://dl.acm.org/doi/abs/10.1145/3543507.3583296?casa_token=F51acjY5vuMAAAAA:zaoH21lA2vAK6kj0CShFe5XJI8AwaK6NhXj0qS4HND0XtSqsN-TCeZpwUcBsiBv7rK1NxxPBy5Ij) [[Code]](https://github.com/XuChen0427/P-MMF)<br>
