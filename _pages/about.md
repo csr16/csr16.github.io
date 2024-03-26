@@ -41,5 +41,5 @@ SIGIR-AP 2023<br>
 [[Paper]](https://dl.acm.org/doi/abs/10.1145/3624918.3625311?casa_token=FTOMSZ8OASAAAAAA:MRqqcE__k0emy7Z7WlsQy0XxENCYDn-AfVQwEaLwiMw1Gs50lGT2ScV308yiqX4htUyceVaCbVV9)<br>
 - P-MMF: Provider Max-min Fairness Re-ranking in Recommender System<br>
 Chen Xu, __Sirui Chen__, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong<br>
-WWW 2023 __Spotlight-Best Paper Award Nominations(16/365)__<br>
+WWW 2023 [__Spotlight-Best Paper Award Nominations(16/365)__]<br>
 [[Paper]](https://dl.acm.org/doi/abs/10.1145/3543507.3583296?casa_token=F51acjY5vuMAAAAA:zaoH21lA2vAK6kj0CShFe5XJI8AwaK6NhXj0qS4HND0XtSqsN-TCeZpwUcBsiBv7rK1NxxPBy5Ij) [[Code]](https://github.com/XuChen0427/P-MMF)<br>
