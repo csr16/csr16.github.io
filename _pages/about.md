@@ -15,7 +15,7 @@ Publications
 ======
 **2024**
 - ReCODE: Modeling Repeat Consumption with Neural ODE<br>
-Sunhao Dai, Changle Qu, __Sirui Chen__, Xiao Zhang and Jun Xu<br>
+Sunhao Dai, Changle Qu, __Sirui Chen__, Xiao Zhang, Jun Xu<br>
 SIGIR 2024 (Short)<br>
 - Incorporating Judgment Prediction into Legal Case Retrieval via Law-aware Generative Retrieval<br>
 Weicong Qin, Zelin Cao, Weijie Yu, Zihua Si, __Sirui Chen__, Jun Xu<br>
