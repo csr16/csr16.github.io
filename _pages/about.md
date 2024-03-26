@@ -26,7 +26,7 @@ Changshuo Zhang *, __Sirui Chen *__, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu<b
 SIGIR 2024<br>
 [[Paper]](https://arxiv.org/abs/2401.09034) [[Code]](https://github.com/zowiezhang/STAS)<br>
 - Stas: Spatial-temporal return decomposition for multi-agent reinforcement learning<br>
-__Sirui Chen *__, Zhaowei Zhang *, Yali Du, Yaodong Yang<br>
+__Sirui Chen *__, Zhaowei Zhang *, Yaodong Yang, Yali Du<br>
 AAAI 2024<br>
 [[Paper]](https://arxiv.org/abs/2304.07520) [[Code]](https://github.com/lyingCS/UOEP)<br>
 
