@@ -6,8 +6,29 @@
     <description>Recent content on Sirui Chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://csr16.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Incorporating Judgment Prediction into Legal Case Retrieval via Law-aware Generative Retrieval</title>
+      <link>https://csr16.github.io/publications/sigir-2024-2/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/sigir-2024-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ReCODE: Modeling Repeat Consumption with Neural ODE</title>
+      <link>https://csr16.github.io/publications/sigir-2024-3/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/sigir-2024-3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy</title>
+      <link>https://csr16.github.io/publications/sigir-2024-1/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/sigir-2024-1/</guid>
+      <description></description>
+    </item>
     <item>
       <title>STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning</title>
       <link>https://csr16.github.io/publications/aaai-2024/</link>
