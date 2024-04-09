@@ -1,0 +1,29 @@
+.about-me-text {
+    float: left;
+    width: 64%;
+    padding-right: 10em;
+}
+
+.about-me-photo {
+    float: right;
+    width: 36%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+@media screen and (max-width: 480px) {
+    .about-me-text {
+        float: left;
+        width: 100%;
+        padding: 0;
+    }
+    .about-me-photo {
+        float: none;
+        width: 100%;
+        margin: 1em 0 1em 0;
+    }
+}

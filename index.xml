@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sirui Chen</title>
+    <link>https://csr16.github.io/</link>
+    <description>Recent content on Sirui Chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://csr16.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning</title>
+      <link>https://csr16.github.io/publications/aaai-2024/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/aaai-2024/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reinforcement Re-ranking with 2D Grid-based Recommendation Panels</title>
+      <link>https://csr16.github.io/publications/sigir-ap-2023/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/sigir-ap-2023/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Controllable Multi-Objective Re-ranking with Policy Hypernetworks</title>
+      <link>https://csr16.github.io/publications/kdd-2023/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/kdd-2023/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>P-MMF: Provider Max-min Fairness Re-ranking in Recommender System</title>
+      <link>https://csr16.github.io/publications/www-2023/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/publications/www-2023/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Example post</title>
+      <link>https://csr16.github.io/posts/example-post/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/posts/example-post/</guid>
+      <description>To make sure everything works as expected and looks pretty, on this page, we will explore how different types of content are displayed by this theme.&#xA;Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings. &amp;lt;h1&amp;gt; is the highest section level while &amp;lt;h6&amp;gt; is the lowest.&#xA;H1 H2 H3 H4 H5 H6 Paragraph Just a normal paragraph Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur?</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://csr16.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/about/</guid>
+      <description>Hi, I&amp;rsquo;m Sirui Chen!&#xA;I am an incoming PhD student at the University of Illinois at Urbana-Champaign. I completed my Master’s degree of data science from Renmin University of China, advised by Prof. Jun Xu. Prior to that, I obtained my Bachelor’s degree from the Department of Foreign Languages and Literatures at Tsinghua University.&#xA;The long-term goal of my research is to develop a reliable and controllable AI system that is fully aligned with human intentions.</description>
+    </item>
+    <item>
+      <title>Imprint and Privacy Information</title>
+      <link>https://csr16.github.io/imprint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://csr16.github.io/imprint/</guid>
+      <description>This Hugo theme is created and officially authorized by Timothy Gebhard.</description>
+    </item>
+  </channel>
+</rss>
