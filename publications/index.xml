@@ -10,51 +10,51 @@
     <atom:link href="https://csr16.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Explicitly Integrating Judgment Prediction with Legal Document Retrieval: A Law-Guided Generative Approach</title>
-      <link>https://csr16.github.io/publications/sigir-2024-2/</link>
+      <link>https://csr16.github.io/publications/sigir_2024-2/</link>
       <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/sigir-2024-2/</guid>
+      <guid>https://csr16.github.io/publications/sigir_2024-2/</guid>
       <description></description>
     </item>
     <item>
       <title>ReCODE: Modeling Repeat Consumption with Neural ODE</title>
-      <link>https://csr16.github.io/publications/sigir-2024-3/</link>
+      <link>https://csr16.github.io/publications/sigir_2024-3/</link>
       <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/sigir-2024-3/</guid>
+      <guid>https://csr16.github.io/publications/sigir_2024-3/</guid>
       <description></description>
     </item>
     <item>
       <title>Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy</title>
-      <link>https://csr16.github.io/publications/sigir-2024-1/</link>
+      <link>https://csr16.github.io/publications/sigir_2024-1/</link>
       <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/sigir-2024-1/</guid>
+      <guid>https://csr16.github.io/publications/sigir_2024-1/</guid>
       <description></description>
     </item>
     <item>
       <title>STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning</title>
-      <link>https://csr16.github.io/publications/aaai-2024/</link>
+      <link>https://csr16.github.io/publications/aaai_2024/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/aaai-2024/</guid>
+      <guid>https://csr16.github.io/publications/aaai_2024/</guid>
       <description></description>
     </item>
     <item>
       <title>Reinforcement Re-ranking with 2D Grid-based Recommendation Panels</title>
-      <link>https://csr16.github.io/publications/sigir-ap-2023/</link>
+      <link>https://csr16.github.io/publications/sigir-ap_2023/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/sigir-ap-2023/</guid>
+      <guid>https://csr16.github.io/publications/sigir-ap_2023/</guid>
       <description></description>
     </item>
     <item>
       <title>Controllable Multi-Objective Re-ranking with Policy Hypernetworks</title>
-      <link>https://csr16.github.io/publications/kdd-2023/</link>
+      <link>https://csr16.github.io/publications/kdd_2023/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/kdd-2023/</guid>
+      <guid>https://csr16.github.io/publications/kdd_2023/</guid>
       <description></description>
     </item>
     <item>
       <title>P-MMF: Provider Max-min Fairness Re-ranking in Recommender System</title>
-      <link>https://csr16.github.io/publications/www-2023/</link>
+      <link>https://csr16.github.io/publications/www_2023/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://csr16.github.io/publications/www-2023/</guid>
+      <guid>https://csr16.github.io/publications/www_2023/</guid>
       <description></description>
     </item>
   </channel>

@@ -23,11 +23,11 @@
 
   
   <title>
-    Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy&nbsp;&middot;&nbsp;Sirui Chen
+    ReCODE: Modeling Repeat Consumption with Neural ODE&nbsp;&middot;&nbsp;Sirui Chen
   </title>
 
   
-  <base href="https://csr16.github.io/publications/sigir-2024-1/">
+  <base href="https://csr16.github.io/publications/sigir_2024-3/">
   
     <link rel="canonical" href="https://csr16.github.io/">
   
@@ -109,17 +109,17 @@
   <article class="publication">
   
     <header>
-      <h1>Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy</h1>
+      <h1>ReCODE: Modeling Repeat Consumption with Neural ODE</h1>
     </header>
 
     <p class="meta-information">
-      Changshuo Zhang<sup>*</sup>, <strong>Sirui Chen<sup>*</sup></strong>, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu
+      Sunhao Dai, Changle Qu, Zihua Si, <strong>Sirui Chen</strong>, Xiao Zhang, Jun Xu
     </p>
 
     
     
     <p class="meta-information">
-      Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR), <time>July 2024</time>
+      Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR Short), <time>July 2024</time>
     </p>
 
     <div class="buttons">
@@ -132,30 +132,6 @@
 
 
   
-    
-  
-
-
-<a class="btn btn-sm" href="https://arxiv.org/abs/2401.09034" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-<a data-fancybox data-src="#SIGIR%202024%201" class="btn btn-sm" data-options='{"touch" : false}'>
-	BibTeX
-</a>
-<div class="citation-box" id="SIGIR 2024 1">
-  <h3>Cite this paper</h3>
-  <pre class="bibtex-code">@article{Chen_Zhang_Yang_Du_2024, 
-title={Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy},
-journal={Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval},
-year = {2024},
-author={Changshuo Zhang, Sirui Chen, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu}
-}</pre>
-</div>
 
 
 
@@ -163,12 +139,10 @@ author={Changshuo Zhang, Sirui Chen, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu}
 
 
 
-  
-  
-  
-  <a class="btn btn-sm" href="https://github.com/lyingCS/UOEP" target="_blank" rel="noopener">
-    Code
-  </a>
+
+
+
+
 
 
 
@@ -196,7 +170,7 @@ author={Changshuo Zhang, Sirui Chen, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu}
 
     <h3>Abstract:</h3>
     <div class="abstract">
-        Reinforcement learning (RL) has gained traction for enhancing user long-term experiences in recommender systems by effectively exploring users' interests. However, modern recommender systems exhibit distinct user behavioral patterns among tens of millions of items, which increases the difficulty of exploration. For example, user behaviors with different activity levels require varying intensity of exploration, while previous studies often overlook this aspect and apply a uniform exploration strategy to all users, which ultimately hurts user experiences in the long run. To address these challenges, we propose User-Oriented Exploration Policy (UOEP), a novel approach facilitating fine-grained exploration among user groups. We first construct a distributional critic which allows policy optimization under varying quantile levels of cumulative reward feedbacks from users, representing user groups with varying activity levels. Guided by this critic, we devise a population of distinct actors aimed at effective and fine-grained exploration within its respective user group. To simultaneously enhance diversity and stability during the exploration process, we further introduce a population-level diversity regularization term and a supervision module. Experimental results on public recommendation datasets demonstrate that our approach outperforms all other baselines in terms of long-term performance, validating its user-oriented exploration effectiveness. Meanwhile, further analyses reveal our approach's benefits of improved performance for low-activity users as well as increased fairness among users.
+        In real-world recommender systems, such as in the music domain, repeat consumption is a common phenomenon where users frequently listen to a small set of preferred songs or artists repeatedly. The key point of modeling repeat consumption is capturing the temporal patterns between a user's repeated consumption of the items. Existing studies often rely on heuristic assumptions, such as assuming an exponential distribution for the temporal gaps. However, due to the high complexity of real-world recommender systems, these pre-defined distributions may fail to capture the intricate dynamic user consumption patterns, leading to sub-optimal performance. Drawing inspiration from the flexibility of neural ordinary differential equations (ODE) in capturing the dynamics of complex systems, we propose ReCODE, a novel model-agnostic framework that utilizes neural ODE to model repeat consumption. ReCODE comprises two essential components: a user's static preference prediction module and the modeling of user dynamic repeat intention. By considering both immediate choices and historical consumption patterns, ReCODE offers comprehensive modeling of user preferences in the target context. Moreover, ReCODE seamlessly integrates with various existing recommendation models, including collaborative-based and sequential-based models, making it easily applicable in different scenarios. Experimental results on two real-world datasets consistently demonstrate that ReCODE significantly improves the performance of base models and outperforms other baseline methods. For better reproducibility, the source code is provided in [https://anonymous.4open.science/r/ReCODE-C747](https://anonymous.4open.science/r/ReCODE-C747).
     </div>
 
   </article>

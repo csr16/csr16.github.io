@@ -23,11 +23,11 @@
 
   
   <title>
-    STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning&nbsp;&middot;&nbsp;Sirui Chen
+    P-MMF: Provider Max-min Fairness Re-ranking in Recommender System&nbsp;&middot;&nbsp;Sirui Chen
   </title>
 
   
-  <base href="https://csr16.github.io/publications/aaai-2024/">
+  <base href="https://csr16.github.io/publications/www_2023/">
   
     <link rel="canonical" href="https://csr16.github.io/">
   
@@ -109,17 +109,17 @@
   <article class="publication">
   
     <header>
-      <h1>STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning</h1>
+      <h1>P-MMF: Provider Max-min Fairness Re-ranking in Recommender System</h1>
     </header>
 
     <p class="meta-information">
-      <strong>Sirui Chen<sup>*</sup></strong>, Zhaowei Zhang<sup>*</sup>, Yaodong Yang, Yali Du
+      Chen Xu, <strong>Sirui Chen</strong>, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong
     </p>
 
     
     
     <p class="meta-information">
-      Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), <time>February 2024</time>
+      Proceedings of the ACM Web Conference (WWW), <time>May 2023</time>
     </p>
 
     <div class="buttons">
@@ -136,7 +136,7 @@
   
 
 
-<a class="btn btn-sm" href="https://arxiv.org/abs/2304.07520" target="_blank" rel="noopener">
+<a class="btn btn-sm" href="https://arxiv.org/pdf/2303.06660.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -144,17 +144,18 @@
 
 
 
-<a data-fancybox data-src="#AAAI%202024" class="btn btn-sm" data-options='{"touch" : false}'>
+<a data-fancybox data-src="#WWW_2023" class="btn btn-sm" data-options='{"touch" : false}'>
 	BibTeX
 </a>
-<div class="citation-box" id="AAAI 2024">
+<div class="citation-box" id="WWW_2023">
   <h3>Cite this paper</h3>
-  <pre class="bibtex-code">@article{Chen_Zhang_Yang_Du_2024, 
-title={STAS: Spatial-Temporal Return Decomposition for Solving Sparse Rewards Problems in Multi-agent Reinforcement Learning},
-journal={Proceedings of the AAAI Conference on Artificial Intelligence},
-year = {2024},
-author={Chen, Sirui and Zhang, Zhaowei and Yang, Yaodong and Du, Yali}
-}</pre>
+  <pre class="bibtex-code">@inproceedings{10.1145/3543507.3583296,
+author = {Xu, Chen and Chen, Sirui and Xu, Jun and Shen, Weiran and Zhang, Xiao and Wang, Gang and Dong, Zhenhua},
+title = {P-MMF: Provider Max-min Fairness Re-ranking in Recommender System},
+year = {2023},
+booktitle = {Proceedings of the ACM Web Conference 2023},
+}
+</pre>
 </div>
 
 
@@ -166,7 +167,7 @@ author={Chen, Sirui and Zhang, Zhaowei and Yang, Yaodong and Du, Yali}
   
   
   
-  <a class="btn btn-sm" href="https://github.com/zowiezhang/STAS" target="_blank" rel="noopener">
+  <a class="btn btn-sm" href="https://github.com/XuChen0427/P-MMF" target="_blank" rel="noopener">
     Code
   </a>
 
@@ -188,19 +189,23 @@ author={Chen, Sirui and Zhang, Zhaowei and Yang, Yaodong and Du, Yali}
 
 
 
-  <a class="btn btn-sm" href="https://doi.org/https://doi.org/10.1609/aaai.v38i16.29681" target="_blank" rel="noopener">
+  <a class="btn btn-sm" href="https://doi.org/https://doi.org/10.1145/3543507.3583296" target="_blank" rel="noopener">
     DOI
   </a>
 
 
 
 
+  <span class="badge btn-sm">
+    Spotlight-Best Paper Award Nominations(16/365) <span class="icon-trophy" aria-hidden="true"></span>
+  </span>
+
 
     </div>
 
     <h3>Abstract:</h3>
     <div class="abstract">
-        Centralized Training with Decentralized Execution (CTDE) has been proven to be an effective paradigm in cooperative multi-agent reinforcement learning (MARL). One of the major challenges is credit assignment, which aims to credit agents by their contributions. While prior studies have shown great success, their methods typically fail to work in episodic reinforcement learning scenarios where global rewards are revealed only at the end of the episode. They lack the functionality to model complicated relations of the delayed global reward in the temporal dimension and suffer from inefficiencies. To tackle this, we introduce Spatial-Temporal Attention with Shapley (STAS), a novel method that learns credit assignment in both temporal and spatial dimensions. It first decomposes the global return back to each time step, then utilizes the Shapley Value to redistribute the individual payoff from the decomposed global reward. To mitigate the computational complexity of the Shapley Value, we introduce an approximation of marginal contribution and utilize Monte Carlo sampling to estimate it. We evaluate our method on an Alice & Bob example and MPE environments across different scenarios. Our results demonstrate that our method effectively assigns spatial-temporal credit, outperforming all state-of-the-art baselines.
+        In this paper, we address the issue of recommending fairly from the aspect of providers, which has become increasingly essential in multistakeholder recommender systems. Existing studies on provider fairness usually focused on designing proportion fairness (PF) metrics that first consider systematic fairness. However, sociological researches show that to make the market more stable, max-min fairness (MMF) is a better metric. The main reason is that MMF aims to improve the utility of the worst ones preferentially, guiding the system to support the providers in weak market positions. When applying MMF to recommender systems, how to balance user preferences and provider fairness in an online recommendation scenario is still a challenging problem. In this paper, we proposed an online re-ranking model named Provider Max-min Fairness Re-ranking (P-MMF) to tackle the problem. Specifically, P-MMF formulates provider fair recommendation as a resource allocation problem, where the exposure slots are considered the resources to be allocated to providers and the max-min fairness is used as the regularizer during the process. We show that the problem can be further represented as a regularized online optimizing problem and solved efficiently in its dual space. During the online re-ranking phase, a momentum gradient descent method is designed to conduct the dynamic re-ranking. Theoretical analysis showed that the regret of P-MMF can be bounded. Experimental results on four public recommender datasets demonstrated that P-MMF can outperformed the state-of-the-art baselines. Experimental results also show that P-MMF can retain small computationally costs on a corpus with the large number of items.
     </div>
 
   </article>

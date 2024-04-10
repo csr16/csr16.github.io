@@ -23,11 +23,11 @@
 
   
   <title>
-    P-MMF: Provider Max-min Fairness Re-ranking in Recommender System&nbsp;&middot;&nbsp;Sirui Chen
+    Controllable Multi-Objective Re-ranking with Policy Hypernetworks&nbsp;&middot;&nbsp;Sirui Chen
   </title>
 
   
-  <base href="https://csr16.github.io/publications/www-2023/">
+  <base href="https://csr16.github.io/publications/kdd_2023/">
   
     <link rel="canonical" href="https://csr16.github.io/">
   
@@ -109,17 +109,17 @@
   <article class="publication">
   
     <header>
-      <h1>P-MMF: Provider Max-min Fairness Re-ranking in Recommender System</h1>
+      <h1>Controllable Multi-Objective Re-ranking with Policy Hypernetworks</h1>
     </header>
 
     <p class="meta-information">
-      Chen Xu, <strong>Sirui Chen</strong>, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong
+      <strong>Sirui Chen<sup>*</sup></strong>, Yuan Wang<sup>*</sup>, Zijing Wen, Zhiyu Li, Changshuo Zhang, Xiao Zhang, Quan Lin, Cheng Zhu, Jun Xu
     </p>
 
     
     
     <p class="meta-information">
-      Proceedings of the ACM Web Conference (WWW), <time>May 2023</time>
+      Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), <time>August 2023</time>
     </p>
 
     <div class="buttons">
@@ -144,10 +144,10 @@
 
 
 
-<a data-fancybox data-src="#WWW%202023" class="btn btn-sm" data-options='{"touch" : false}'>
+<a data-fancybox data-src="#KDD_2023" class="btn btn-sm" data-options='{"touch" : false}'>
 	BibTeX
 </a>
-<div class="citation-box" id="WWW 2023">
+<div class="citation-box" id="KDD_2023">
   <h3>Cite this paper</h3>
   <pre class="bibtex-code">@inproceedings{10.1145/3543507.3583296,
 author = {Xu, Chen and Chen, Sirui and Xu, Jun and Shen, Weiran and Zhang, Xiao and Wang, Gang and Dong, Zhenhua},
@@ -167,7 +167,7 @@ booktitle = {Proceedings of the ACM Web Conference 2023},
   
   
   
-  <a class="btn btn-sm" href="https://github.com/XuChen0427/P-MMF" target="_blank" rel="noopener">
+  <a class="btn btn-sm" href="https://github.com/lyingCS/Controllable-Multi-Objective-Reranking" target="_blank" rel="noopener">
     Code
   </a>
 
@@ -189,23 +189,19 @@ booktitle = {Proceedings of the ACM Web Conference 2023},
 
 
 
-  <a class="btn btn-sm" href="https://doi.org/https://doi.org/10.1145/3543507.3583296" target="_blank" rel="noopener">
+  <a class="btn btn-sm" href="https://doi.org/https://doi.org/10.1145/3580305.3599796" target="_blank" rel="noopener">
     DOI
   </a>
 
 
 
 
-  <span class="badge btn-sm">
-    Spotlight-Best Paper Award Nominations(16/365) <span class="icon-trophy" aria-hidden="true"></span>
-  </span>
-
 
     </div>
 
     <h3>Abstract:</h3>
     <div class="abstract">
-        In this paper, we address the issue of recommending fairly from the aspect of providers, which has become increasingly essential in multistakeholder recommender systems. Existing studies on provider fairness usually focused on designing proportion fairness (PF) metrics that first consider systematic fairness. However, sociological researches show that to make the market more stable, max-min fairness (MMF) is a better metric. The main reason is that MMF aims to improve the utility of the worst ones preferentially, guiding the system to support the providers in weak market positions. When applying MMF to recommender systems, how to balance user preferences and provider fairness in an online recommendation scenario is still a challenging problem. In this paper, we proposed an online re-ranking model named Provider Max-min Fairness Re-ranking (P-MMF) to tackle the problem. Specifically, P-MMF formulates provider fair recommendation as a resource allocation problem, where the exposure slots are considered the resources to be allocated to providers and the max-min fairness is used as the regularizer during the process. We show that the problem can be further represented as a regularized online optimizing problem and solved efficiently in its dual space. During the online re-ranking phase, a momentum gradient descent method is designed to conduct the dynamic re-ranking. Theoretical analysis showed that the regret of P-MMF can be bounded. Experimental results on four public recommender datasets demonstrated that P-MMF can outperformed the state-of-the-art baselines. Experimental results also show that P-MMF can retain small computationally costs on a corpus with the large number of items.
+        Multi-stage ranking pipelines have become widely used strategies in modern recommender systems, where the final stage aims to return a ranked list of items that balances a number of requirements such as user preference, diversity, novelty etc. Linear scalarization is arguably the most widely used technique to merge multiple requirements into one optimization objective, by summing up the requirements with certain preference weights. Existing final-stage ranking methods often adopt a static model where the preference weights are determined during offline training and kept unchanged during online serving. Whenever a modification of the preference weights is needed, the model has to be re-trained, which is time and resources inefficient. Meanwhile, the most appropriate weights may vary greatly for different groups of targeting users or at different time periods (e.g., during holiday promotions). In this paper, we propose a framework called controllable multi-objective re-ranking (CMR) which incorporates a hypernetwork to generate parameters for a re-ranking model according to different preference weights. In this way, CMR is enabled to adapt the preference weights according to the environment changes in an online manner, without retraining the models. Moreover, we classify practical business-oriented tasks into four main categories and seamlessly incorporate them in a new proposed re-ranking model based on an Actor-Evaluator framework, which serves as a reliable real-world testbed for CMR. Offline experiments based on the dataset collected from Taobao App showed that CMR improved several popular re-ranking models by using them as underlying models. Online A/B tests also demonstrated the effectiveness and trustworthiness of CMR.
     </div>
 
   </article>
