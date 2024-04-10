@@ -559,31 +559,31 @@ table tr th:last-child {
     margin: 0;
     overflow: scroll; }
 
-.publication-li {
+.publication-content {
   margin-bottom: 3em;
   width: 100%; }
-  .publication-li h3 {
+  .publication-content h3 {
     font-size: 1.25em;
     margin: -0.15em 0 0.5em 0; }
-    .publication-li h3 a {
+    .publication-content h3 a {
       color: #212121;
       font-weight: 700; }
-    .publication-li h3 a:hover {
+    .publication-content h3 a:hover {
       color: #1565c0; }
-  .publication-li p {
+  .publication-content p {
     font-size: 1em;
     color: #666666;
     margin: 0.5em 0;
     line-height: 1.6em; }
-  .publication-li .venue {
+  .publication-content .venue {
     font-style: italic; }
-  .publication-li .buttons {
+  .publication-content .buttons {
     margin-top: 0.6em; }
 
-.publication-li:first-of-type {
-  margin-top: 4em; }
+.publication-content:first-of-type {
+  margin-top: 0.8em; }
 
-.publication-li:last-of-type {
+.publication-content:last-of-type {
   margin-bottom: 0; }
 
 .publication .meta-information {
@@ -603,6 +603,18 @@ table tr th:last-child {
 .publication h3 {
   margin: 2.2em 0 1em 0;
   line-height: 0; }
+
+.publication-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  transition: transform .3s, box-shadow .3s; }
+
+.publication-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); }
 
 .inline-svg {
   display: inline-block;
