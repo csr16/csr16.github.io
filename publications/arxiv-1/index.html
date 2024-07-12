@@ -23,11 +23,11 @@
 
   
   <title>
-    ReCODE: Modeling Repeat Consumption with Neural ODE&nbsp;&middot;&nbsp;Sirui Chen
+    Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce&nbsp;&middot;&nbsp;Sirui Chen
   </title>
 
   
-  <base href="https://csr16.github.io/publications/sigir_2024-3/">
+  <base href="https://csr16.github.io/publications/arxiv-1/">
   
     <link rel="canonical" href="https://csr16.github.io/">
   
@@ -109,17 +109,17 @@
   <article class="publication">
   
     <header>
-      <h1>ReCODE: Modeling Repeat Consumption with Neural ODE</h1>
+      <h1>Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce</h1>
     </header>
 
     <p class="meta-information">
-      Sunhao Dai, Changle Qu, Zihua Si, <strong>Sirui Chen</strong>, Xiao Zhang, Jun Xu
+      Yuan Wang, Zhiyu Li, Changshuo Zhang, <strong>Sirui Chen</strong>, Xiao Zhang, Jun Xu, Quan Lin
     </p>
 
     
     
     <p class="meta-information">
-      Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR Short), <time>July 2024</time>
+      arxiv preprint, <time>July 2024</time>
     </p>
 
     <div class="buttons">
@@ -136,7 +136,7 @@
   
 
 
-<a class="btn btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3626772.3657936" target="_blank" rel="noopener">
+<a class="btn btn-sm" href="https://arxiv.org/pdf/2406.14004" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -144,31 +144,6 @@
 
 
 
-<a data-fancybox data-src="#SIGIR_2024-3" class="btn btn-sm" data-options='{"touch" : false}'>
-	BibTeX
-</a>
-<div class="citation-box" id="SIGIR_2024-3">
-  <h3>Cite this paper</h3>
-  <pre class="bibtex-code">@inproceedings{dai2024recode,
-  title={ReCODE: Modeling Repeat Consumption with Neural ODE},
-  author={Dai, Sunhao and Qu, Changle and Chen, Sirui and Zhang, Xiao and Xu, Jun},
-  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
-  year={2024}
-}</pre>
-</div>
-
-
-
-
-
-
-
-  
-  
-  
-  <a class="btn btn-sm" href="https://github.com/quchangle1/ReCODE" target="_blank" rel="noopener">
-    Code
-  </a>
 
 
 
@@ -188,9 +163,10 @@
 
 
 
-  <a class="btn btn-sm" href="https://doi.org/https://doi.org/10.1145/3626772.3657936" target="_blank" rel="noopener">
-    DOI
-  </a>
+
+
+
+
 
 
 
@@ -200,7 +176,7 @@
 
     <h3>Abstract:</h3>
     <div class="abstract">
-        In real-world recommender systems, such as in the music domain, repeat consumption is a common phenomenon where users frequently listen to a small set of preferred songs or artists repeatedly. The key point of modeling repeat consumption is capturing the temporal patterns between a user's repeated consumption of the items. Existing studies often rely on heuristic assumptions, such as assuming an exponential distribution for the temporal gaps. However, due to the high complexity of real-world recommender systems, these pre-defined distributions may fail to capture the intricate dynamic user consumption patterns, leading to sub-optimal performance. Drawing inspiration from the flexibility of neural ordinary differential equations (ODE) in capturing the dynamics of complex systems, we propose ReCODE, a novel model-agnostic framework that utilizes neural ODE to model repeat consumption. ReCODE comprises two essential components: a user's static preference prediction module and the modeling of user dynamic repeat intention. By considering both immediate choices and historical consumption patterns, ReCODE offers comprehensive modeling of user preferences in the target context. Moreover, ReCODE seamlessly integrates with various existing recommendation models, including collaborative-based and sequential-based models, making it easily applicable in different scenarios. Experimental results on two real-world datasets consistently demonstrate that ReCODE significantly improves the performance of base models and outperforms other baseline methods. For better reproducibility, the source code is provided in [https://anonymous.4open.science/r/ReCODE-C747](https://anonymous.4open.science/r/ReCODE-C747).
+        Recommender systems have been widely used in e-commerce, and re-ranking models are playing an increasingly significant role in the domain, which leverages the inter-item influence and determines the final recommendation lists. Online learning methods keep updating a deployed model with the latest available samples to capture the shifting of the underlying data distribution in ecommerce. However, they depend on the availability of real user feedback, which may be delayed by hours or even days, such as item purchases, leading to a lag in model enhancement. In this paper, we propose a novel extension of online learning methods for re-ranking modeling, which we term LAST, an acronym for Learning At Serving Time. It circumvents the requirement of user feedback by using a surrogate model to provide the instructional signal needed to steer model improvement. Upon receiving an online request, LAST finds and applies a model modification on the fly before generating a recommendation result for the request. The modification is request-specific and transient. It means the modification is tailored to and only to the current request to capture the specific context of the request. After a request, the modification is discarded, which helps to prevent error propagation and stabilizes the online learning procedure since the predictions of the surrogate model may be inaccurate. Most importantly, as a complement to feedback-based online learning methods, LAST can be seamlessly integrated into existing online learning systems to create a more adaptive and responsive recommendation experience. Comprehensive experiments, both offline and online, affirm that LAST outperforms state-of-the-art re-ranking models.
     </div>
 
   </article>
