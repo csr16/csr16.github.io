@@ -23,11 +23,11 @@
 
   
   <title>
-    News &amp; Updates&nbsp;&middot;&nbsp;Sirui Chen
+    Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce&nbsp;&middot;&nbsp;Sirui Chen
   </title>
 
   
-  <base href="https://csr16.github.io/news/">
+  <base href="https://csr16.github.io/publications/recsys_2024/">
   
     <link rel="canonical" href="https://csr16.github.io/">
   
@@ -56,9 +56,6 @@
   <link rel="manifest" href="https://csr16.github.io/favicon/site.webmanifest">
 
   
-  
-    <link rel="alternate" href="https://csr16.github.io/news/index.xml" type="application/rss+xml" title="Sirui Chen">
-    <link rel="feed" href="https://csr16.github.io/news/index.xml" type="application/rss+xml" title="Sirui Chen"> 
   
 
 
@@ -111,44 +108,88 @@
     
     <div class="content">
       
-<section class="container page">
-  <article>
+
+<section class="wrapper">
+  <article class="publication">
+  
     <header>
-      <h1>News &amp; Updates</h1>
+      <h1>Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce</h1>
     </header>
+
+    <p class="meta-information">
+      Yuan Wang, Zhiyu Li, Changshuo Zhang, <strong>Sirui Chen</strong>, Xiao Zhang, Jun Xu, Quan Lin
+    </p>
+
     
-    <table class="news-table">
     
+    <p class="meta-information">
+      Proceedings of the 18th ACM Conference on Recommender Systems (RECSYS), <time>October 2024</time>
+    </p>
+
+    <div class="buttons">
       
-      
-      
-      <tr>
-        
-        <td class="date-badge-td"><time class="date-badge year-2024"style=""datetime="2024-07-30T00:00:00Z">07&thinsp;/&thinsp;2024</time></td>
-        <td>One paper accepted by RECSYS 2024!</td>
-      </tr>
+
+
+
+
+
+
+
+  
     
-      
-      
-      
-      <tr>
-        
-        <td class="date-badge-td"><time class="date-badge year-2024"style=""datetime="2024-07-17T00:00:00Z">07&thinsp;/&thinsp;2024</time></td>
-        <td>One paper selected as a nominee for the SIGIR 2024 Best Short Paper. Thanks to SIGIR!</td>
-      </tr>
-    
-      
-      
-      
-      <tr>
-        
-        <td class="date-badge-td"><time class="date-badge year-2024"style=""datetime="2024-03-26T00:00:00Z">03&thinsp;/&thinsp;2024</time></td>
-        <td>Three papers accepted by SIGIR 2024!</td>
-      </tr>
-    
-    </table>
+  
+
+
+<a class="btn btn-sm" href="https://arxiv.org/pdf/2406.14004" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <h3>Abstract:</h3>
+    <div class="abstract">
+        Recommender systems have been widely used in e-commerce, and re-ranking models are playing an increasingly significant role in the domain, which leverages the inter-item influence and determines the final recommendation lists. Online learning methods keep updating a deployed model with the latest available samples to capture the shifting of the underlying data distribution in ecommerce. However, they depend on the availability of real user feedback, which may be delayed by hours or even days, such as item purchases, leading to a lag in model enhancement. In this paper, we propose a novel extension of online learning methods for re-ranking modeling, which we term LAST, an acronym for Learning At Serving Time. It circumvents the requirement of user feedback by using a surrogate model to provide the instructional signal needed to steer model improvement. Upon receiving an online request, LAST finds and applies a model modification on the fly before generating a recommendation result for the request. The modification is request-specific and transient. It means the modification is tailored to and only to the current request to capture the specific context of the request. After a request, the modification is discarded, which helps to prevent error propagation and stabilizes the online learning procedure since the predictions of the surrogate model may be inaccurate. Most importantly, as a complement to feedback-based online learning methods, LAST can be seamlessly integrated into existing online learning systems to create a more adaptive and responsive recommendation experience. Comprehensive experiments, both offline and online, affirm that LAST outperforms state-of-the-art re-ranking models.
+    </div>
+
   </article>
 </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js" integrity="sha256-x4elcEZhSRoId3IcqTS2aqJqxw+KjquMzEjIbIakFVY=" crossorigin="anonymous"></script>
+
 
     </div>
 
