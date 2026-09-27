@@ -2,394 +2,604 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#212121">
-  <meta name="author" content="Sirui Chen">
-  <meta name="description" content="Sirui Chen's Homepage — PhD student at UIUC.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sirui Chen</title>
+  <meta name="author" content="Sirui Chen">
+  <meta name="description" content="Sirui Chen, Ph.D. student at UIUC working on data-centric learning and reinforcement learning for large language models.">
+  <link rel="icon" type="image/png" href="images/myfavicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/myfavicon.png">
 </head>
-<body>
+<body id="top">
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+      <symbol id="i-zoom" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    </defs>
+  </svg>
 
   <!-- ===== Navigation ===== -->
-  <nav class="navigation" id="top-nav">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a class="navigation-title" href="#about">Sirui Chen</a>
-      <input type="checkbox" id="menu-toggle">
-      <label class="menu-button float-right" for="menu-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
-      </label>
-      <ul class="navigation-list">
-        <li class="navigation-item"><a class="navigation-link" href="#about">About</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="#news">News</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="#publications">Publications</a></li>
-        <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
+      <a class="nav-brand" href="#top">Sirui Chen</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger" aria-label="Menu"><svg class="ic"><use href="#i-menu"/></svg></label>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#service">Service</a></li>
       </ul>
     </div>
   </nav>
 
-  <main class="wrapper">
+  <main class="container">
 
     <!-- ===== About ===== -->
     <section id="about">
-      <div class="about-profile">
-        <div class="avatar">
-          <img src="images/avatar.jpg" alt="Sirui Chen">
+      <header class="hero" id="hero">
+        <img class="hero-photo" src="images/avatar.jpg" alt="Photo of Sirui Chen" width="188" height="188">
+        <div class="hero-id">
+          <h1 class="hero-name">Sirui Chen</h1>
+          <p class="hero-role">Ph.D. Student in Computer Science<br>University of Illinois Urbana-Champaign</p>
         </div>
-        <div class="name">Sirui Chen</div>
-        <div class="affil">PhD Student<br>University of Illinois<br>Urbana-Champaign</div>
-        <div class="social-links">
-          <a href="https://illinois.edu/" title="Institution" aria-label="UIUC">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M243.4 2.587C251.4-.8625 260.6-.8625 268.6 2.587L492.6 98.59C506.6 104.6 514.4 119.6 511.3 134.4C508.3 149.3 495.2 159.1 479.1 160V168C479.1 181.3 469.3 192 455.1 192H55.1C42.74 192 31.1 181.3 31.1 168V160C16.81 159.1 3.708 149.3 .6528 134.4C-2.402 119.6 5.429 104.6 19.39 98.59L243.4 2.587zM256 128C273.7 128 288 113.7 288 96C288 78.33 273.7 64 256 64C238.3 64 224 78.33 224 96C224 113.7 238.3 128 256 128zM127.1 416H167.1V224H231.1V416H280V224H344V416H384V224H448V420.3C448.6 420.6 449.2 420.1 449.8 421.4L497.8 453.4C509.5 461.2 514.7 475.8 510.6 489.3C506.5 502.8 494.1 512 480 512H31.1C17.9 512 5.458 502.8 1.372 489.3C-2.715 475.8 2.515 461.2 14.25 453.4L62.25 421.4C62.82 420.1 63.41 420.6 63.1 420.3V224H127.1V416z"/></svg>
-          </a>
-          <a href="https://github.com/csr16" title="GitHub" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
-          </a>
-          <a href="https://scholar.google.com/citations?user=PoV08-oAAAAJ&hl=en" title="Google Scholar" aria-label="Google Scholar">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-          </a>
-          <a href="mailto:sirui6@illinois.edu" title="Email" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
-          </a>
+        <div class="hero-links">
+          <a class="btn" href="mailto:sirui6@illinois.edu"><svg class="ic"><use href="#i-mail"/></svg>Email</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=PoV08-oAAAAJ&amp;hl=en"><svg class="ic"><use href="#i-cap"/></svg>Google Scholar</a>
+          <a class="btn" href="https://github.com/csr16"><svg class="ic"><use href="#i-github"/></svg>GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/sirui-chen-59317036a/"><svg class="ic"><use href="#i-linkedin"/></svg>LinkedIn</a>
         </div>
-      </div>
+      </header>
 
-      <div class="about-text">
-        <p>Hi, I'm Sirui Chen! I am a PhD student at the <a href="https://illinois.edu/">University of Illinois at Urbana-Champaign</a>, advised by <a href="https://www.jingruihe.com/">Prof. Jingrui He</a>. I completed my Master's degree in Computer Science from <a href="https://en.ruc.edu.cn/">Renmin University of China</a>, advised by <a href="https://gsai.ruc.edu.cn/english/~junxu">Prof. Jun Xu</a>. Prior to that, I obtained my Bachelor's degree from the Department of Foreign Languages and Literatures at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>.</p>
-        <p>My long-term goal is to develop <strong>reliable and controllable</strong> AI systems fully aligned with human intentions. My research spans two interconnected themes:</p>
-        <ul style="margin: 0.4rem 0 1.2rem; padding-left: 1.6rem; font-size: 0.95em; line-height: 1.85;">
-          <li><strong>Data-Centric Machine Learning:</strong> data selection, synthetic data generation;</li>
-          <li><strong>Reinforcement Learning:</strong> agent collaboration, agent evolution with exploration, model interaction in complex environments;</li>
+      <div class="bio">
+        <p>I'm a Ph.D. student in Computer Science at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>, advised by <a href="https://www.jingruihe.com/">Prof. Jingrui He</a>. Before that, I received my M.Eng. from <a href="https://en.ruc.edu.cn/">Renmin University of China</a>, advised by <a href="https://gsai.ruc.edu.cn/english/~junxu">Prof. Jun Xu</a>, and my B.A. in Japanese from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>.</p>
+        <p>My long-term goal is to build <strong>reliable, controllable AI systems that improve themselves</strong>, closing the loop from data curation to model training to evaluation. My research currently focuses on two directions:</p>
+        <ul class="directions">
+          <li><strong>Reinforcement learning and reasoning.</strong> How can a model improve by learning from its own experience? I study how LLMs and agents can explore, learn from feedback on their own trajectories, and turn extra computation into better reasoning, making this self-improvement loop efficient and reliable in training and at inference time.</li>
+          <li><strong>Data-centric learning.</strong> What a model becomes is shaped by what it learns from. I study how to measure the value of data for a given model and use that signal to select and build training data automatically, so that models can curate their own learning material as they evolve.</li>
         </ul>
-        <p>Ultimately, I aspire to build systems that <strong>self-evolve</strong>, autonomously improving from data curation to model training to evaluation, closing the loop on the fly.</p>
-        <p>I'm always happy to discuss research or explore collaborations — feel free to reach out!</p>
-        <div class="interest-tags">
-          <span class="interest-tag">Data-Centric ML</span>
-          <span class="interest-tag">Reinforcement Learning</span>
-          <span class="interest-tag">Large Language Models</span>
-        </div>
+        <p class="bio-note">Before LLMs, I worked on reinforcement learning for recommender systems and multi-agent RL, including research at Alibaba. I'm always happy to chat about research or collaborations, so feel free to <a href="mailto:sirui6@illinois.edu">reach out</a>.</p>
       </div>
     </section>
 
     <!-- ===== News ===== -->
-    <section id="news" class="section-block">
-      <h1 class="section-title">News</h1>
-      <div class="news-scroll">
-        <table class="news-table">
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-08">08&thinsp;/&thinsp;2026</time></td>
-            <td>Two papers accepted by <strong>EMNLP 2026</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-07">07&thinsp;/&thinsp;2026</time></td>
-            <td>Two papers accepted by <strong>COLM 2026</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-04">04&thinsp;/&thinsp;2026</time></td>
-            <td>Two papers accepted by <strong>ICML 2026</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-04">04&thinsp;/&thinsp;2026</time></td>
-            <td>T-RAG won <strong>Outstanding Award</strong> at Logical Reasoning of LLM Workshop @ ICLR 2026!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-04">04&thinsp;/&thinsp;2026</time></td>
-            <td>Two papers accepted by <strong>ACL 2026</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-03">03&thinsp;/&thinsp;2026</time></td>
-            <td>Excited to join <strong>Amazon</strong> as a Research Scientist Intern this summer!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2026-01">01&thinsp;/&thinsp;2026</time></td>
-            <td>One paper accepted by <strong>ICLR 2026</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2025-10">10&thinsp;/&thinsp;2025</time></td>
-            <td>AutoTool won <strong>Best Paper Award</strong> at MMRAgI Workshop @ ICCV 2025!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2024-08">08&thinsp;/&thinsp;2024</time></td>
-            <td>Officially started my Ph.D journey at UIUC!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2024-07">07&thinsp;/&thinsp;2024</time></td>
-            <td>One paper selected as a <strong>Best Short Paper Nominee</strong> at SIGIR 2024. Thanks to SIGIR!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2024-07">07&thinsp;/&thinsp;2024</time></td>
-            <td>One paper accepted by <strong>RecSys 2024</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2024-03">03&thinsp;/&thinsp;2024</time></td>
-            <td>Three papers accepted by <strong>SIGIR 2024</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2023-12">12&thinsp;/&thinsp;2023</time></td>
-            <td>One paper accepted by <strong>AAAI 2024</strong>!</td>
-          </tr>
-          <tr>
-            <td class="date-badge-td"><time class="date-badge" datetime="2023-05">05&thinsp;/&thinsp;2023</time></td>
-            <td>One paper accepted by <strong>KDD 2023</strong>!</td>
-          </tr>
-        </table>
+    <section id="news" class="section">
+      <h2 class="section-title">News</h2>
+      <div class="news-box" id="news-box">
+        <ul class="news news-scroll" id="news-scroll" tabindex="0" aria-label="News">
+          <li><time datetime="2026-09">Sep 2026</time><p><span class="new">New</span>Two papers accepted to <b>NeurIPS 2026</b>, on <a href="#p-opd">better rollouts for on-policy distillation</a> and on <a href="#p-portfolio">training agents to scale reasoning at inference time</a>.</p></li>
+          <li><time datetime="2026-08">Aug 2026</time><p>Two papers accepted to <b>EMNLP 2026</b>, on <a href="#a-predict">adaptive-length infilling for diffusion language models</a> and <a href="#a-calib">calibration data selection for LLM pruning</a>.</p></li>
+          <li><time datetime="2026-07">Jul 2026</time><p>Two papers accepted to <b>COLM 2026</b>, on <a href="#a-nirvana">structured pruning for LLM compression</a> and <a href="#a-evoselect">data-efficient LLM adaptation</a>.</p></li>
+          <li><time datetime="2026-04">Apr 2026</time><p>Two papers accepted to <b>ICML 2026</b>, on <a href="#p-aricl">in-context demonstration selection</a> and <a href="#p-autotool">dynamic tool selection for agentic reasoning</a>.</p></li>
+          <li class="is-award"><time datetime="2026-04">Apr 2026</time><p><svg class="ic"><use href="#i-trophy"/></svg><a href="#p-trag">T-RAG</a> won the <b>Outstanding Award</b> at the Logical Reasoning of LLM Workshop @ ICLR 2026.</p></li>
+          <li><time datetime="2026-04">Apr 2026</time><p>Two papers accepted to <b>ACL 2026</b>, on <a href="#p-arrol">online rollout pruning for RLVR</a> (Oral) and <a href="#p-trag">retrieval-augmented generation over tables</a> (Findings).</p></li>
+          <li><time datetime="2026-03">Mar 2026</time><p>Excited to join <b>Amazon</b> Rufus Foundation Models as an Applied Scientist Intern.</p></li>
+          <li><time datetime="2026-01">Jan 2026</time><p>One paper accepted to <b>ICLR 2026</b>, on <a href="#p-iprox">influence-preserving proxies for data selection in LLM fine-tuning</a>.</p></li>
+          <li class="is-award"><time datetime="2025-10">Oct 2025</time><p><svg class="ic"><use href="#i-trophy"/></svg><a href="#p-autotool">AutoTool</a> won the <b>Best Paper Award</b> at the MMRAgI Workshop @ ICCV 2025.</p></li>
+          <li><time datetime="2024-08">Aug 2024</time><p>Started my Ph.D. at <b>UIUC</b>.</p></li>
+          <li class="is-award"><time datetime="2024-07">Jul 2024</time><p><svg class="ic"><use href="#i-trophy"/></svg><a href="#a-recode">ReCODE</a> was selected as a <b>Best Short Paper Nominee</b> at SIGIR 2024.</p></li>
+          <li><time datetime="2024-07">Jul 2024</time><p>One paper accepted to <b>RecSys 2024</b>, on <a href="#a-last">learning re-ranking models at serving time without user feedback</a>.</p></li>
+          <li><time datetime="2024-03">Mar 2024</time><p>Three papers accepted to <b>SIGIR 2024</b>, on <a href="#a-uoep">long-term exploration in recommendation</a>, <a href="#a-recode">repeat consumption modeling</a> and <a href="#a-gear">legal document retrieval</a>.</p></li>
+          <li><time datetime="2023-12">Dec 2023</time><p>One paper accepted to <b>AAAI 2024</b>, on <a href="#a-stas">credit assignment for multi-agent RL</a>.</p></li>
+          <li><time datetime="2023-05">May 2023</time><p>One paper accepted to <b>KDD 2023</b>, on <a href="#a-cmr">controllable multi-objective re-ranking</a>.</p></li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===== Selected Publications ===== -->
-    <section id="publications" class="section-block">
-      <h1 class="section-title">Selected Publications</h1>
-      <p style="margin-top:0; font-size:0.9em; color:#666;">* denotes equal contribution. Selected from first/co-first author and award-winning papers.</p>
+    <!-- ===== Publications ===== -->
+    <section id="publications" class="section">
+      <div class="section-head">
+        <h2 class="section-title">Publications</h2>
+        <div class="tabs" role="tablist" aria-label="Publication view">
+          <span class="tab-ind" aria-hidden="true"></span>
+          <button role="tab" id="tab-selected" aria-controls="panel-selected" aria-selected="true">Selected</button>
+          <button role="tab" id="tab-all" aria-controls="panel-all" aria-selected="false">All<span class="count">20</span></button>
+        </div>
+      </div>
+      <p class="pub-note"><sup>*</sup> Equal contribution · Also on <a href="https://scholar.google.com/citations?user=PoV08-oAAAAJ&amp;hl=en">Google Scholar</a></p>
 
-      <div class="pub-list">
+      <!-- Selected: Ph.D. work, first/co-first author or awarded -->
+      <div class="tab-panel" id="panel-selected" role="tabpanel" aria-labelledby="tab-selected">
 
-        <!-- 1. ICML 2026 Auto-regressive -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/ICML26.png" alt="ICML 2026 paper thumbnail"></div>
+        <article class="pub" id="p-opd">
+          <button class="pub-thumb" type="button" data-full="paperfigs/neurips26-opd.png" aria-label="Enlarge figure"><img src="paperfigs/neurips26-opd.png" alt="Method overview: Proposing Better Rollouts for On-Policy Distillation" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
           <div class="pub-body">
+            <div class="pub-tags"><span class="tag tag-venue">NeurIPS 2026</span></div>
+            <h3 class="pub-title">Proposing Better Rollouts for On-Policy Distillation</h3>
+            <p class="pub-authors"><span class="me">Sirui Chen</span><sup>*</sup>, Yunzhe Qi<sup>*</sup>, Haobo Xu, Jiaru Zou, Mengting Ai, Zihao Li, Jingrui He</p>
+          </div>
+        </article>
+
+        <article class="pub" id="p-portfolio">
+          <button class="pub-thumb" type="button" data-full="paperfigs/neurips26-portfolio.png" aria-label="Enlarge figure"><img src="paperfigs/neurips26-portfolio.png" alt="Method overview: Reasoning Portfolio" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
+          <div class="pub-body">
+            <div class="pub-tags"><span class="tag tag-venue">NeurIPS 2026</span></div>
+            <h3 class="pub-title">Reasoning Portfolio: Training Agent to Scale Reasoning at Inference Time</h3>
+            <p class="pub-authors">Yunzhe Qi<sup>*</sup>, <span class="me">Sirui Chen</span><sup>*</sup>, Jiaru Zou, Yanjun Zhao, Mengting Ai, Jingrui He</p>
+          </div>
+        </article>
+
+        <article class="pub" id="p-aricl">
+          <button class="pub-thumb" type="button" data-full="paperfigs/icml26-aricl.png" aria-label="Enlarge figure"><img src="paperfigs/icml26-aricl.png" alt="Method overview: Auto-regressive In-context Demonstration Selection" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
+          <div class="pub-body">
+            <div class="pub-tags"><span class="tag tag-venue">ICML 2026</span></div>
             <h3 class="pub-title"><a href="https://openreview.net/forum?id=8uZlNyR5R3" target="_blank" rel="noopener">Auto-regressive In-context Demonstration Selection</a></h3>
-            <p class="pub-authors">Yunzhe&nbsp;Qi<sup>*</sup>, <strong>Sirui&nbsp;Chen<sup>*</sup></strong>, Jiaru&nbsp;Zou<sup>*</sup>, Jingrui&nbsp;He</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">ICML '26</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://openreview.net/pdf?id=8uZlNyR5R3" target="_blank" rel="noopener">PDF</a>
+            <p class="pub-authors">Yunzhe Qi<sup>*</sup>, <span class="me">Sirui Chen</span><sup>*</sup>, Jiaru Zou<sup>*</sup>, Jingrui He</p>
+            <div class="pub-links">
+              <a href="https://openreview.net/pdf?id=8uZlNyR5R3" target="_blank" rel="noopener"><svg class="ic"><use href="#i-file"/></svg>Paper</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- 2. AutoTool ICML '26 -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/ICCV25.png" alt="AutoTool paper thumbnail"></div>
+        <article class="pub" id="p-iprox">
+          <button class="pub-thumb" type="button" data-full="paperfigs/iclr26-iprox.png" aria-label="Enlarge figure"><img src="paperfigs/iclr26-iprox.png" alt="Method overview: Influence-Preserving Proxies" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
           <div class="pub-body">
-            <h3 class="pub-title"><a href="https://arxiv.org/pdf/2512.13278" target="_blank" rel="noopener">AutoTool: Dynamic Tool Selection and Integration for Agentic Reasoning</a></h3>
-            <p class="pub-authors">Jiaru&nbsp;Zou<sup>*</sup>, Ling&nbsp;Yang<sup>*</sup>, Yunzhe&nbsp;Qi, <strong>Sirui&nbsp;Chen</strong>, Mengting&nbsp;Ai, Ke&nbsp;Shen, Jingrui&nbsp;He, Mengdi&nbsp;Wang</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">ICML '26</span>
+            <div class="pub-tags"><span class="tag tag-venue">ICLR 2026</span></div>
+            <h3 class="pub-title"><a href="https://arxiv.org/abs/2602.17835" target="_blank" rel="noopener">Influence-Preserving Proxies for Gradient-Based Data Selection in LLM Fine-Tuning</a></h3>
+            <p class="pub-authors"><span class="me">Sirui Chen</span><sup>*</sup>, Yunzhe Qi<sup>*</sup>, Mengting Ai, Yifan Sun, Ruizhong Qiu, Jiaru Zou, Jingrui He</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/pdf/2602.17835" target="_blank" rel="noopener"><svg class="ic"><use href="#i-file"/></svg>Paper</a>
+              <a href="https://github.com/csr16/IProX" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a>
             </div>
-            <div class="buttons">
-              <a class="btn" href="https://arxiv.org/pdf/2512.13278" target="_blank" rel="noopener">PDF</a>
-            </div>
-            <span class="award-badge">&#127942; Best Paper Award @ MMRAgI Workshop, ICCV '25</span>
           </div>
-        </div>
+        </article>
 
-        <!-- 3. ACL 2026 ARRoL (Oral) -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/ACL26_02.png" alt="ARRoL paper thumbnail"></div>
+        <article class="pub" id="p-autotool">
+          <button class="pub-thumb" type="button" data-full="paperfigs/icml26-autotool.png" aria-label="Enlarge figure"><img src="paperfigs/icml26-autotool.png" alt="Method overview: AutoTool" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
           <div class="pub-body">
+            <div class="pub-tags"><span class="tag tag-venue">ICML 2026</span><span class="tag tag-award"><svg class="ic"><use href="#i-trophy"/></svg>Best Paper · MMRAgI Workshop @ ICCV 2025</span></div>
+            <h3 class="pub-title"><a href="https://arxiv.org/abs/2512.13278" target="_blank" rel="noopener">AutoTool: Dynamic Tool Selection and Integration for Agentic Reasoning</a></h3>
+            <p class="pub-authors">Jiaru Zou<sup>*</sup>, Ling Yang<sup>*</sup>, Yunzhe Qi, <span class="me">Sirui Chen</span>, Mengting Ai, Ke Shen, Jingrui He, Mengdi Wang</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/pdf/2512.13278" target="_blank" rel="noopener"><svg class="ic"><use href="#i-file"/></svg>Paper</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub" id="p-arrol">
+          <button class="pub-thumb" type="button" data-full="paperfigs/acl26-arrol.png" aria-label="Enlarge figure"><img src="paperfigs/acl26-arrol.png" alt="System overview: ARRoL" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
+          <div class="pub-body">
+            <div class="pub-tags"><span class="tag tag-venue">ACL 2026</span><span class="tag tag-award"><svg class="ic"><use href="#i-star"/></svg>Oral Presentation</span></div>
             <h3 class="pub-title"><a href="https://aclanthology.org/2026.acl-long.632/" target="_blank" rel="noopener">Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR</a></h3>
-            <p class="pub-authors">Haobo&nbsp;Xu, <strong>Sirui&nbsp;Chen</strong>, Ruizhong&nbsp;Qiu, Yuchen&nbsp;Yan, Chen&nbsp;Luo, Monica&nbsp;Xiao&nbsp;Cheng, Jingrui&nbsp;He, Hanghang&nbsp;Tong</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">ACL '26</span>
+            <p class="pub-authors">Haobo Xu, <span class="me">Sirui Chen</span>, Ruizhong Qiu, Yuchen Yan, Chen Luo, Monica Xiao Cheng, Jingrui He, Hanghang Tong</p>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2026.acl-long.632.pdf" target="_blank" rel="noopener"><svg class="ic"><use href="#i-file"/></svg>Paper</a>
             </div>
-            <div class="buttons">
-              <a class="btn" href="https://aclanthology.org/2026.acl-long.632.pdf" target="_blank" rel="noopener">PDF</a>
-            </div>
-            <span class="award-badge">Oral Presentation</span>
           </div>
-        </div>
+        </article>
 
-        <!-- 4. ACL 2026 Findings RAG over Tables -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/ACL26.png" alt="ACL 2026 paper thumbnail"></div>
+        <article class="pub" id="p-trag">
+          <button class="pub-thumb" type="button" data-full="paperfigs/acl26-trag.png" aria-label="Enlarge figure"><img src="paperfigs/acl26-trag.png" alt="Framework overview: T-RAG" loading="lazy"><span class="zoom"><svg class="ic"><use href="#i-zoom"/></svg></span></button>
           <div class="pub-body">
-            <h3 class="pub-title"><a href="https://arxiv.org/pdf/2504.01346" target="_blank" rel="noopener">RAG over Tables: Hierarchical Memory Index, Multi-Stage Retrieval, and Benchmarking</a></h3>
-            <p class="pub-authors">Jiaru&nbsp;Zou<sup>*</sup>, Dongqi&nbsp;Fu<sup>*</sup>, <strong>Sirui&nbsp;Chen</strong>, Xinrui&nbsp;He, Zihao&nbsp;Li, Yada&nbsp;Zhu, Jiawei&nbsp;Han, Jingrui&nbsp;He</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">ACL '26 Findings</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://arxiv.org/pdf/2504.01346" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/jiaruzouu/T-RAG" target="_blank" rel="noopener">Code</a>
-            </div>
-            <span class="award-badge">&#127942; Outstanding Award @ Logical Reasoning of LLM, ICLR '26</span>
-          </div>
-        </div>
-
-        <!-- 4. ICLR 2026 -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/ICLR26.png" alt="ICLR 2026 paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://arxiv.org/pdf/2602.17835" target="_blank" rel="noopener">Influence-Preserving Proxies for Gradient-Based Data Selection in LLM Fine-Tuning</a></h3>
-            <p class="pub-authors"><strong>Sirui&nbsp;Chen<sup>*</sup></strong>, Yunzhe&nbsp;Qi<sup>*</sup>, Mengting&nbsp;Ai, Yifan&nbsp;Sun, Ruizhong&nbsp;Qiu, Jiaru&nbsp;Zou, Jingrui&nbsp;He</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">ICLR '26</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://arxiv.org/pdf/2602.17835" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/csr16/IProX" target="_blank" rel="noopener">Code</a>
+            <div class="pub-tags"><span class="tag tag-venue">ACL 2026 Findings</span><span class="tag tag-award"><svg class="ic"><use href="#i-trophy"/></svg>Outstanding Award · LLM Logical Reasoning Workshop @ ICLR 2026</span></div>
+            <h3 class="pub-title"><a href="https://arxiv.org/abs/2504.01346" target="_blank" rel="noopener">RAG over Tables: Hierarchical Memory Index, Multi-Stage Retrieval, and Benchmarking</a></h3>
+            <p class="pub-authors">Jiaru Zou<sup>*</sup>, Dongqi Fu<sup>*</sup>, <span class="me">Sirui Chen</span>, Xinrui He, Zihao Li, Yada Zhu, Jiawei Han, Jingrui He</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/pdf/2504.01346" target="_blank" rel="noopener"><svg class="ic"><use href="#i-file"/></svg>Paper</a>
+              <a href="https://github.com/jiaruzouu/T-RAG" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a>
             </div>
           </div>
-        </div>
-
-        <!-- 4. SIGIR 2024 UOEP -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/SIGIR24.png" alt="SIGIR 2024 paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3626772.3657714" target="_blank" rel="noopener">Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy</a></h3>
-            <p class="pub-authors">Changshuo&nbsp;Zhang<sup>*</sup>, <strong>Sirui&nbsp;Chen<sup>*</sup></strong>, Xiao&nbsp;Zhang, Sunhao&nbsp;Dai, Weijie&nbsp;Yu, Jun&nbsp;Xu</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">SIGIR '24</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://dl.acm.org/doi/pdf/10.1145/3626772.3657714" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/lyingCS/UOEP" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. SIGIR 2024 Short ReCODE (award) -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/SIGIR24Short.png" alt="SIGIR 2024 Short paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3626772.3657936" target="_blank" rel="noopener">ReCODE: Modeling Repeat Consumption with Neural ODE</a></h3>
-            <p class="pub-authors">Sunhao&nbsp;Dai, Changle&nbsp;Qu, <strong>Sirui&nbsp;Chen</strong>, Xiao&nbsp;Zhang, Jun&nbsp;Xu</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">SIGIR '24</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://dl.acm.org/doi/pdf/10.1145/3626772.3657936" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/quchangle1/ReCODE" target="_blank" rel="noopener">Code</a>
-            </div>
-            <span class="award-badge">&#127942; Best Short Paper Nominees (7/87)</span>
-          </div>
-        </div>
-
-        <!-- 5. AAAI 2024 -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/AAAI24.png" alt="AAAI 2024 paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://arxiv.org/pdf/2304.07520.pdf" target="_blank" rel="noopener">STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning</a></h3>
-            <p class="pub-authors"><strong>Sirui&nbsp;Chen<sup>*</sup></strong>, Zhaowei&nbsp;Zhang<sup>*</sup>, Yaodong&nbsp;Yang, Yali&nbsp;Du</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">AAAI '24</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://arxiv.org/pdf/2304.07520.pdf" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/zowiezhang/STAS" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. SIGIR-AP 2023 -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/SIGIR-AP23.png" alt="SIGIR-AP 2023 paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://gsai.ruc.edu.cn/uploads/20231127/7d030fd2a54e09e9589c2ae841f3a340.pdf" target="_blank" rel="noopener">Reinforcement Re-ranking with 2D Grid-based Recommendation Panels</a></h3>
-            <p class="pub-authors"><strong>Sirui&nbsp;Chen</strong>, Xiao&nbsp;Zhang, Xu&nbsp;Chen, Zhiyu&nbsp;Li, Yuan&nbsp;Wang, Quan&nbsp;Lin, Jun&nbsp;Xu</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">SIGIR-AP '23</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://gsai.ruc.edu.cn/uploads/20231127/7d030fd2a54e09e9589c2ae841f3a340.pdf" target="_blank" rel="noopener">PDF</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. KDD 2023 -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/KDD23.png" alt="KDD 2023 paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://arxiv.org/pdf/2306.05118" target="_blank" rel="noopener">Controllable Multi-Objective Re-ranking with Policy Hypernetworks</a></h3>
-            <p class="pub-authors"><strong>Sirui&nbsp;Chen<sup>*</sup></strong>, Yuan&nbsp;Wang<sup>*</sup>, Zijing&nbsp;Wen, Zhiyu&nbsp;Li, Changshuo&nbsp;Zhang, Xiao&nbsp;Zhang, Quan&nbsp;Lin, Cheng&nbsp;Zhu, Jun&nbsp;Xu</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">KDD '23</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://arxiv.org/pdf/2306.05118" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/lyingCS/Controllable-Multi-Objective-Reranking" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. WWW 2023 P-MMF (award) -->
-        <div class="publication-item">
-          <div class="pub-thumb"><img src="paperfigs/WWW23.png" alt="WWW 2023 paper thumbnail"></div>
-          <div class="pub-body">
-            <h3 class="pub-title"><a href="https://arxiv.org/pdf/2303.06660.pdf" target="_blank" rel="noopener">P-MMF: Provider Max-min Fairness Re-ranking in Recommender System</a></h3>
-            <p class="pub-authors">Chen&nbsp;Xu, <strong>Sirui&nbsp;Chen</strong>, Jun&nbsp;Xu, Weiran&nbsp;Shen, Xiao&nbsp;Zhang, Gang&nbsp;Wang, Zhenhua&nbsp;Dong</p>
-            <div class="pub-venue-line">
-              <span class="venue-tag">WWW '23</span>
-            </div>
-            <div class="buttons">
-              <a class="btn" href="https://arxiv.org/pdf/2303.06660.pdf" target="_blank" rel="noopener">PDF</a>
-              <a class="btn" href="https://github.com/XuChen0427/P-MMF" target="_blank" rel="noopener">Code</a>
-            </div>
-            <span class="award-badge">&#127942; Spotlight Best Paper Nominees (16/365)</span>
-          </div>
-        </div>
-
-      </div><!-- /pub-list -->
-    </section>
-
-    <!-- ===== Services ===== -->
-    <section id="services" class="section-block">
-      <h1 class="section-title">Services</h1>
-      <div class="services-grid">
-        <div class="services-col">
-          <h3>Conference Reviewer</h3>
-          <p>NeurIPS, ICML, ACL, CVPR, ICLR</p>
-          <p>AAAI, WWW, DAI, IEEE DSAA</p>
-        </div>
-        <div class="services-col">
-          <h3>Journal Reviewer</h3>
-          <p>TNNLS, TKDD, TIST</p>
-        </div>
+        </article>
       </div>
 
-      <div class="affil-bar">
-        <img src="images/thu.png" alt="Tsinghua University" class="affil-logo">
-        <img src="images/ruc.png" alt="Renmin University of China" class="affil-logo">
-        <img src="images/uiuc.png" alt="University of Illinois Urbana-Champaign" class="affil-logo">
+      <!-- All: by topic (cards list the Ph.D. topics); own first/co-first work first, then others, newest first -->
+      <div class="tab-panel" id="panel-all" role="tabpanel" aria-labelledby="tab-all" hidden>
+        <nav class="topic-nav" aria-label="Research topics since my Ph.D.">
+          <a href="#t-rl"><span class="topic-num">01</span><span class="topic-name">Reinforcement Learning &amp; Reasoning</span><span class="topic-count">5 papers</span></a>
+          <a href="#t-data"><span class="topic-num">02</span><span class="topic-name">Data-Centric Learning</span><span class="topic-count">4 papers</span></a>
+          <a href="#t-eff"><span class="topic-num">03</span><span class="topic-name">Efficient LLMs</span><span class="topic-count">3 papers</span></a>
+        </nav>
+
+        <section class="topic" id="t-rl">
+          <header class="topic-head"><span class="topic-num">01</span><h3 class="topic-title">Reinforcement Learning &amp; Reasoning</h3><span class="topic-count">5 papers</span></header>
+          <p class="topic-desc">Improving how LLMs and agents reason, through reinforcement learning, distillation, tool use and retrieval.</p>
+          <ul class="pc-list">
+            <li class="pc" id="a-opd">
+              <span class="pc-venue">NeurIPS 2026</span>
+              <div>
+                <span class="pc-title">Proposing Better Rollouts for On-Policy Distillation</span>
+                <span class="pc-authors"><span class="me">Sirui Chen</span><sup>*</sup>, Yunzhe Qi<sup>*</sup>, Haobo Xu, Jiaru Zou, Mengting Ai, Zihao Li, Jingrui He</span>
+              </div>
+            </li>
+            <li class="pc" id="a-portfolio">
+              <span class="pc-venue">NeurIPS 2026</span>
+              <div>
+                <span class="pc-title">Reasoning Portfolio: Training Agent to Scale Reasoning at Inference Time</span>
+                <span class="pc-authors">Yunzhe Qi<sup>*</sup>, <span class="me">Sirui Chen</span><sup>*</sup>, Jiaru Zou, Yanjun Zhao, Mengting Ai, Jingrui He</span>
+              </div>
+            </li>
+            <li class="pc" id="a-autotool">
+              <span class="pc-venue">ICML 2026</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2512.13278" target="_blank" rel="noopener">AutoTool: Dynamic Tool Selection and Integration for Agentic Reasoning</a>
+                <span class="pc-authors">Jiaru Zou<sup>*</sup>, Ling Yang<sup>*</sup>, Yunzhe Qi, <span class="me">Sirui Chen</span>, Mengting Ai, Ke Shen, Jingrui He, Mengdi Wang</span>
+                <div class="pc-meta"><span class="tag tag-award"><svg class="ic"><use href="#i-trophy"/></svg>Best Paper · MMRAgI Workshop @ ICCV 2025</span></div>
+              </div>
+            </li>
+            <li class="pc" id="a-trag">
+              <span class="pc-venue">ACL 2026 Findings</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2504.01346" target="_blank" rel="noopener">RAG over Tables: Hierarchical Memory Index, Multi-Stage Retrieval, and Benchmarking</a>
+                <span class="pc-authors">Jiaru Zou<sup>*</sup>, Dongqi Fu<sup>*</sup>, <span class="me">Sirui Chen</span>, Xinrui He, Zihao Li, Yada Zhu, Jiawei Han, Jingrui He</span>
+                <div class="pc-meta"><span class="tag tag-award"><svg class="ic"><use href="#i-trophy"/></svg>Outstanding Award · LLM Logical Reasoning Workshop @ ICLR 2026</span><a href="https://github.com/jiaruzouu/T-RAG" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+            <li class="pc" id="a-eywa">
+              <span class="pc-venue">arXiv Preprint</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2604.27351" target="_blank" rel="noopener">Heterogeneous Scientific Foundation Model Collaboration</a>
+                <span class="pc-authors">Zihao Li, Jiaru Zou, Feihao Fang, Xuying Ning, Mengting Ai, Tianxin Wei, <span class="me">Sirui Chen</span>, Xiyuan Yang, Jingrui He</span>
+                <div class="pc-meta"><a href="https://github.com/Violet24K/Eywa" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="topic" id="t-data">
+          <header class="topic-head"><span class="topic-num">02</span><h3 class="topic-title">Data-Centric Learning</h3><span class="topic-count">4 papers</span></header>
+          <p class="topic-desc">Measuring and selecting the data that LLMs learn from, for fine-tuning, in-context learning and adaptation.</p>
+          <ul class="pc-list">
+            <li class="pc" id="a-aricl">
+              <span class="pc-venue">ICML 2026</span>
+              <div>
+                <a class="pc-title" href="https://openreview.net/forum?id=8uZlNyR5R3" target="_blank" rel="noopener">Auto-regressive In-context Demonstration Selection</a>
+                <span class="pc-authors">Yunzhe Qi<sup>*</sup>, <span class="me">Sirui Chen</span><sup>*</sup>, Jiaru Zou<sup>*</sup>, Jingrui He</span>
+              </div>
+            </li>
+            <li class="pc" id="a-iprox">
+              <span class="pc-venue">ICLR 2026</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2602.17835" target="_blank" rel="noopener">Influence-Preserving Proxies for Gradient-Based Data Selection in LLM Fine-Tuning</a>
+                <span class="pc-authors"><span class="me">Sirui Chen</span><sup>*</sup>, Yunzhe Qi<sup>*</sup>, Mengting Ai, Yifan Sun, Ruizhong Qiu, Jiaru Zou, Jingrui He</span>
+                <div class="pc-meta"><a href="https://github.com/csr16/IProX" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+            <li class="pc" id="a-calib">
+              <span class="pc-venue">EMNLP 2026 Findings</span>
+              <div>
+                <span class="pc-title">Learning What Matters: End-to-End Adaptive Calibration Data Selection for LLM Pruning</span>
+                <span class="pc-authors">Mengting Ai, <span class="me">Sirui Chen</span>, Maggie Zarekarizi, Kommy Weldemariam, Jingrui He</span>
+              </div>
+            </li>
+            <li class="pc" id="a-evoselect">
+              <span class="pc-venue">COLM 2026</span>
+              <div>
+                <span class="pc-title">EvoSelect: Data-Efficient LLM Evolution for Targeted Task Adaptation</span>
+                <span class="pc-authors">Tingwei Li, <span class="me">Sirui Chen</span>, Jiaru Zou, Yingbing Huang, Tianxin Wei, Jingrui He, Hanghang Tong</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="topic" id="t-eff">
+          <header class="topic-head"><span class="topic-num">03</span><h3 class="topic-title">Efficient LLMs</h3><span class="topic-count">3 papers</span></header>
+          <p class="topic-desc">Making LLMs cheaper to train and run, from rollout pruning in RL to structured pruning and faster decoding.</p>
+          <ul class="pc-list">
+            <li class="pc" id="a-predict">
+              <span class="pc-venue">EMNLP 2026</span>
+              <div>
+                <span class="pc-title">Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models</span>
+                <span class="pc-authors">Haobo Xu, <span class="me">Sirui Chen</span>, Yuanchen Bei, Lingjie Chen, Yuchen Yan, Dongqi Fu, Jingrui He, Hanghang Tong</span>
+              </div>
+            </li>
+            <li class="pc" id="a-nirvana">
+              <span class="pc-venue">COLM 2026</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2509.14230" target="_blank" rel="noopener">NIRVANA: Structured Pruning Reimagined for Large Language Model Compression</a>
+                <span class="pc-authors">Mengting Ai, Tianxin Wei, <span class="me">Sirui Chen</span>, Jingrui He</span>
+              </div>
+            </li>
+            <li class="pc" id="a-arrol">
+              <span class="pc-venue">ACL 2026</span>
+              <div>
+                <a class="pc-title" href="https://aclanthology.org/2026.acl-long.632/" target="_blank" rel="noopener">Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR</a>
+                <span class="pc-authors">Haobo Xu, <span class="me">Sirui Chen</span>, Ruizhong Qiu, Yuchen Yan, Chen Luo, Monica Xiao Cheng, Jingrui He, Hanghang Tong</span>
+                <div class="pc-meta"><span class="tag tag-award"><svg class="ic"><use href="#i-star"/></svg>Oral Presentation</span></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="topic" id="t-rec">
+          <header class="topic-head"><span class="topic-num">04</span><h3 class="topic-title">Recommendation, Retrieval &amp; Multi-Agent RL</h3><span class="topic-count">8 papers</span></header>
+          <p class="topic-desc">Reinforcement learning for recommender systems, re-ranking, information retrieval and multi-agent credit assignment.</p>
+          <ul class="pc-list">
+            <li class="pc" id="a-uoep">
+              <span class="pc-venue">SIGIR 2024</span>
+              <div>
+                <a class="pc-title" href="https://dl.acm.org/doi/10.1145/3626772.3657714" target="_blank" rel="noopener">Reinforcing Long-Term Performance in Recommender Systems with User-Oriented Exploration Policy</a>
+                <span class="pc-authors">Changshuo Zhang<sup>*</sup>, <span class="me">Sirui Chen</span><sup>*</sup>, Xiao Zhang, Sunhao Dai, Weijie Yu, Jun Xu</span>
+                <div class="pc-meta"><a href="https://github.com/lyingCS/UOEP" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+            <li class="pc" id="a-stas">
+              <span class="pc-venue">AAAI 2024</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2304.07520" target="_blank" rel="noopener">STAS: Spatial-Temporal Return Decomposition for Multi-agent Reinforcement Learning</a>
+                <span class="pc-authors"><span class="me">Sirui Chen</span><sup>*</sup>, Zhaowei Zhang<sup>*</sup>, Yaodong Yang, Yali Du</span>
+                <div class="pc-meta"><a href="https://github.com/zowiezhang/STAS" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+            <li class="pc" id="a-panel">
+              <span class="pc-venue">SIGIR-AP 2023</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2204.04954" target="_blank" rel="noopener">Reinforcement Re-ranking with 2D Grid-based Recommendation Panels</a>
+                <span class="pc-authors"><span class="me">Sirui Chen</span>, Xiao Zhang, Xu Chen, Zhiyu Li, Yuan Wang, Quan Lin, Jun Xu</span>
+              </div>
+            </li>
+            <li class="pc" id="a-cmr">
+              <span class="pc-venue">KDD 2023</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2306.05118" target="_blank" rel="noopener">Controllable Multi-Objective Re-ranking with Policy Hypernetworks</a>
+                <span class="pc-authors"><span class="me">Sirui Chen</span><sup>*</sup>, Yuan Wang<sup>*</sup>, Zijing Wen, Zhiyu Li, Changshuo Zhang, Xiao Zhang, Quan Lin, Cheng Zhu, Jun Xu</span>
+                <div class="pc-meta"><a href="https://github.com/lyingCS/Controllable-Multi-Objective-Reranking" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+            <li class="pc" id="a-last">
+              <span class="pc-venue">RecSys 2024</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2406.14004" target="_blank" rel="noopener">Do Not Wait: Learning Re-Ranking Model Without User Feedback At Serving Time in E-Commerce</a>
+                <span class="pc-authors">Yuan Wang, Zhiyu Li, Changshuo Zhang, <span class="me">Sirui Chen</span>, Xiao Zhang, Jun Xu, Quan Lin</span>
+              </div>
+            </li>
+            <li class="pc" id="a-recode">
+              <span class="pc-venue">SIGIR 2024</span>
+              <div>
+                <a class="pc-title" href="https://dl.acm.org/doi/10.1145/3626772.3657936" target="_blank" rel="noopener">ReCODE: Modeling Repeat Consumption with Neural ODE</a>
+                <span class="pc-authors">Sunhao Dai, Changle Qu, <span class="me">Sirui Chen</span>, Xiao Zhang, Jun Xu</span>
+                <div class="pc-meta"><span class="tag tag-award"><svg class="ic"><use href="#i-trophy"/></svg>Best Short Paper Nominee (7/87)</span><a href="https://github.com/quchangle1/ReCODE" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+            <li class="pc" id="a-gear">
+              <span class="pc-venue">SIGIR 2024</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2312.09591" target="_blank" rel="noopener">Explicitly Integrating Judgment Prediction with Legal Document Retrieval: A Law-Guided Generative Approach</a>
+                <span class="pc-authors">Weicong Qin, Zelin Cao, Weijie Yu, Zihua Si, <span class="me">Sirui Chen</span>, Jun Xu</span>
+              </div>
+            </li>
+            <li class="pc" id="a-pmmf">
+              <span class="pc-venue">WWW 2023</span>
+              <div>
+                <a class="pc-title" href="https://arxiv.org/abs/2303.06660" target="_blank" rel="noopener">P-MMF: Provider Max-min Fairness Re-ranking in Recommender System</a>
+                <span class="pc-authors">Chen Xu, <span class="me">Sirui Chen</span>, Jun Xu, Weiran Shen, Xiao Zhang, Gang Wang, Zhenhua Dong</span>
+                <div class="pc-meta"><span class="tag tag-award"><svg class="ic"><use href="#i-trophy"/></svg>Best Paper Nominee · Spotlight (16/365)</span><a href="https://github.com/XuChen0427/P-MMF" target="_blank" rel="noopener"><svg class="ic"><use href="#i-code"/></svg>Code</a></div>
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
     </section>
 
-    <!-- ===== Footer ===== -->
+    <!-- ===== Experience & Education ===== -->
+    <section id="experience" class="section">
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <div class="xp-grid">
+        <div>
+          <h3 class="xp-head">Industry</h3>
+          <ul class="xp">
+            <li>
+              <span class="xp-logo"><img src="images/amazon.svg" alt="Amazon"></span>
+              <div>
+                <div class="xp-date">May-Dec 2026</div>
+                <div class="xp-org">Amazon</div>
+                <div class="xp-role">Applied Scientist Intern · Rufus Foundation Models</div>
+                <div class="xp-desc">Evolving long-term agentic reasoning · Mentor: Dr. Zheng Li</div>
+              </div>
+            </li>
+            <li>
+              <span class="xp-logo"><img src="images/alibaba.svg" alt="Alibaba"></span>
+              <div>
+                <div class="xp-date">2021-2022</div>
+                <div class="xp-org">Alibaba</div>
+                <div class="xp-role">Research Intern · Taobao Group</div>
+                <div class="xp-desc">RL for private-domain recommendation · Mentor: Dr. Yuan Wang</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="xp-head">Education</h3>
+          <ul class="xp">
+            <li>
+              <span class="xp-logo"><img src="images/uiuc.png" alt="UIUC"></span>
+              <div>
+                <div class="xp-date">Since 2024</div>
+                <div class="xp-org">University of Illinois Urbana-Champaign</div>
+                <div class="xp-role">Ph.D. in Computer Science</div>
+                <div class="xp-desc">Advisor: Prof. Jingrui He</div>
+              </div>
+            </li>
+            <li>
+              <span class="xp-logo"><img src="images/ruc.png" alt="Renmin University of China"></span>
+              <div>
+                <div class="xp-date">2020-2023</div>
+                <div class="xp-org">Renmin University of China</div>
+                <div class="xp-role">M.Eng. in Big Data Science &amp; Engineering</div>
+                <div class="xp-desc">Advisor: Prof. Jun Xu</div>
+              </div>
+            </li>
+            <li>
+              <span class="xp-logo"><img src="images/thu.png" alt="Tsinghua University"></span>
+              <div>
+                <div class="xp-date">2016-2020</div>
+                <div class="xp-org">Tsinghua University</div>
+                <div class="xp-role">B.A. in Japanese</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Service ===== -->
+    <section id="service" class="section">
+      <h2 class="section-title">Service</h2>
+      <dl class="svc">
+        <div><dt>Conference reviewer</dt><dd>NeurIPS · ICML · ICLR · ACL · EMNLP · CVPR · AAAI · WWW · DAI · IEEE DSAA</dd></div>
+        <div><dt>Journal reviewer</dt><dd>TNNLS · TKDD · TIST</dd></div>
+      </dl>
+    </section>
+
     <footer class="footer">
-      &copy; 2026 Sirui Chen
-      <span class="sep">·</span>
-      <a href="https://csr16.github.io">csr16.github.io</a>
+      <span>© 2026 Sirui Chen</span>
+      <span>Last updated September 2026</span>
     </footer>
-
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js" integrity="sha256-x4elcEZhSRoId3IcqTS2aqJqxw+KjquMzEjIbIakFVY=" crossorigin="anonymous"></script>
+  <!-- Figure preview -->
+  <div class="lb" id="lb" hidden>
+    <div class="lb-panel" role="dialog" aria-modal="true" aria-label="Figure preview">
+      <button class="lb-close" type="button" aria-label="Close"><svg class="ic"><use href="#i-x"/></svg></button>
+      <img class="lb-img" alt="">
+      <p class="lb-cap"></p>
+    </div>
+  </div>
+
   <script>
-    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-      a.addEventListener('click', function(e) {
-        var target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- Tabs with a sliding indicator ---------- */
+      var tabs = document.querySelectorAll('.tabs [role="tab"]');
+      var ind = document.querySelector('.tab-ind');
+      function moveIndicator(tab) {
+        ind.style.width = tab.offsetWidth + 'px';
+        ind.style.transform = 'translateX(' + tab.offsetLeft + 'px)';
+      }
+      function activate(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          var panel = document.getElementById(t.getAttribute('aria-controls'));
+          t.setAttribute('aria-selected', on);
+          if (on && panel.hidden) {
+            panel.hidden = false;
+            panel.classList.remove('entering'); void panel.offsetWidth; panel.classList.add('entering');
+          } else if (!on) {
+            panel.hidden = true;
+          }
+        });
+        moveIndicator(tab);
+      }
+      tabs.forEach(function (t) { t.addEventListener('click', function () { activate(t); }); });
+      function syncIndicator() { moveIndicator(document.querySelector('.tabs [aria-selected="true"]')); }
+      syncIndicator();
+      if (document.fonts) document.fonts.ready.then(syncIndicator);
+      window.addEventListener('resize', syncIndicator);
+
+      /* ---------- Reveal papers as they scroll into view ---------- */
+      var items = document.querySelectorAll('.pub, .pc');
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        items.forEach(function (el) { el.classList.add('reveal'); });
+        var io = new IntersectionObserver(function (entries) {
+          var k = 0;
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.style.setProperty('--d', (k++ * 70) + 'ms');
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          });
+        }, { rootMargin: '0px 0px -8% 0px' });
+        items.forEach(function (el) { io.observe(el); });
+      }
+
+      /* ---------- In-page links: open the right tab, then highlight ---------- */
+      function reveal(target) {
+        var panel = target.closest('.tab-panel');
+        if (panel && panel.hidden) activate(document.querySelector('[aria-controls="' + panel.id + '"]'));
+      }
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        document.getElementById('nav-toggle').checked = false;
+        var target = document.getElementById(a.getAttribute('href').slice(1));
+        if (!target) return;
+        reveal(target);
+        if (target.matches('.pub, .pc')) {
           e.preventDefault();
-          var navH = document.getElementById('top-nav').offsetHeight;
-          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navH - 12, behavior: 'smooth' });
-          document.getElementById('menu-toggle').checked = false;
+          target.classList.add('in');
+          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+          target.classList.remove('flash'); void target.offsetWidth; target.classList.add('flash');
+          history.replaceState(null, '', '#' + target.id);
         }
       });
-    });
-    var sectionIds = ['about', 'news', 'publications', 'services'];
-    var navLinks = {};
-    sectionIds.forEach(function(id) {
-      navLinks[id] = document.querySelector('.navigation-link[href="#' + id + '"]');
-    });
-    window.addEventListener('scroll', function() {
-      var navH = document.getElementById('top-nav').offsetHeight + 24;
-      var scrollY = window.scrollY + navH;
-      var current = 'about';
-      sectionIds.forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollY) current = id;
+      if (location.hash) {
+        var h = document.getElementById(location.hash.slice(1));
+        if (h) { reveal(h); h.classList.add('in'); h.scrollIntoView({ block: 'center' }); }
+      }
+
+      /* ---------- Figure preview ---------- */
+      var lb = document.getElementById('lb');
+      var lbImg = lb.querySelector('.lb-img');
+      var lbCap = lb.querySelector('.lb-cap');
+      var opener = null;
+      function openFigure(btn) {
+        opener = btn;
+        var pub = btn.closest('.pub');
+        lbImg.src = btn.getAttribute('data-full');
+        lbImg.alt = btn.querySelector('img').alt;
+        lbCap.innerHTML = '<span class="lb-venue">' + pub.querySelector('.tag-venue').textContent + '</span>' + pub.querySelector('.pub-title').textContent;
+        lb.hidden = false;
+        document.documentElement.classList.add('lb-lock');
+        requestAnimationFrame(function () { requestAnimationFrame(function () { lb.classList.add('open'); }); });
+        lb.querySelector('.lb-close').focus({ preventScroll: true });
+      }
+      function closeFigure() {
+        if (lb.hidden) return;
+        lb.classList.remove('open');
+        document.documentElement.classList.remove('lb-lock');
+        setTimeout(function () { lb.hidden = true; lbImg.removeAttribute('src'); }, reduceMotion ? 0 : 220);
+        if (opener) opener.focus({ preventScroll: true });
+      }
+      document.querySelectorAll('.pub-thumb').forEach(function (b) {
+        b.addEventListener('click', function () { openFigure(b); });
       });
-      sectionIds.forEach(function(id) {
-        if (navLinks[id]) navLinks[id].classList.toggle('active', id === current);
-      });
-    });
+      lb.addEventListener('click', function (e) { if (!e.target.closest('.lb-img')) closeFigure(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeFigure(); });
+
+      /* ---------- News box: fade hint until scrolled to the end ---------- */
+      var newsBox = document.getElementById('news-box');
+      var newsScroll = document.getElementById('news-scroll');
+      function newsEdge() {
+        newsBox.classList.toggle('at-end', newsScroll.scrollTop + newsScroll.clientHeight >= newsScroll.scrollHeight - 4);
+        newsBox.classList.toggle('scrolled', newsScroll.scrollTop > 4);
+      }
+      newsScroll.addEventListener('scroll', newsEdge, { passive: true });
+      newsEdge();
+
+      /* ---------- Nav: hairline, brand after the hero, active section ---------- */
+      var nav = document.getElementById('nav');
+      var hero = document.getElementById('hero');
+      var ids = ['about', 'news', 'publications', 'experience', 'service'];
+      var links = {};
+      ids.forEach(function (id) { links[id] = document.querySelector('.nav-links a[href="#' + id + '"]'); });
+      function onScroll() {
+        nav.classList.toggle('scrolled', window.scrollY > 8);
+        nav.classList.toggle('past-hero', hero.getBoundingClientRect().bottom < 60);
+        var current = ids[0];
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          current = ids[ids.length - 1];
+        } else {
+          ids.forEach(function (id) { if (document.getElementById(id).getBoundingClientRect().top <= 120) current = id; });
+        }
+        ids.forEach(function (id) { links[id].classList.toggle('active', id === current); });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
   </script>
 </body>
 </html>
